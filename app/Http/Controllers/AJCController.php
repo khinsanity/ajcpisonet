@@ -10,4 +10,8 @@ class AJCController extends Controller
     {
         return view('include.internet');
     }
+    public function promos()
+    {
+        return view('include.promos');
+    }
 }

@@ -41,3 +41,4 @@ Route::get('/testroute', function(){
 
 // From AJCController
 Route::get('/internet', [AJCController::class, 'internet'])->name('internet');
+Route::get('/promos', [AJCController::class, 'promos'])->name('promos');

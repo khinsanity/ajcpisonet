@@ -12,7 +12,7 @@
             <a class="nav-link {{ (\Request::route()->getName() == 'internet') ? 'active' : '' }}"  href="{{route('internet')}}">Internet</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Promos</a>
+            <a class="nav-link {{ (\Request::route()->getName() == 'promos') ? 'active' : '' }}"  href="{{route('promos')}}">Promos</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="#">ContactUs</a>
