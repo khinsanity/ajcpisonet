@@ -25,9 +25,9 @@
 
 
             /* Query here */
-            @media screen and (max-width:100px){
+            @media screen and (max-width:700px){
                 .logo{
-                    display:none;
+                    width: 80px;
                  }
             }
         </style>
