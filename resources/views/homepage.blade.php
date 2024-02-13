@@ -13,7 +13,7 @@
 
 
     <div class="container-fluid Fiber_Experience px-5 ">
-        <h1 class="">Elevate Your Fiber Experience at AJC Internet</h1>
+        <h1 class="" style="font-size:35px;">Elevate Your Fiber Experience at AJC Internet</h1>
         <div class="row">
             <div class="col-12 col-md-12 col-lg-4 py-5 d-flex">
                 <div class="bundle px-1 px-md-2 "><span class="text"><i class="fa-solid fa-wifi"></i></span></div>
@@ -53,11 +53,11 @@
         <div class="row ">
             <div class="row">
                 <div class="col col-md-2"><span></span></div>
-                <div class="col col-md-4 px-2 text-center">
+                <div class="col-12 col-md-4 px-2 py-5 text-center border-e-2 border-2 m-1 rounded-4 ">
                     <h3 class="mbps">200 Mbps</h3>
                     <p class="p_mbps">Fiber Unli Plan 1699</p>
                 </div>
-                <div class="col col-md-4 px-2 text-center">
+                <div class="col-12 col-md-4 px-2 py-5 text-center border-2 m-1 rounded-4">
                     <h3 class="mbps">400 Mbps</h3>
                     <p class="p_mbps">Fiber Unli Plan 1699</p>
                 </div>
@@ -65,11 +65,11 @@
             </div>
             <div class="row">
                 <div class="col col-md-2"><span></span></div>
-                <div class="col col-md-4 px-2 text-center">
+                <div class="col-12 col-md-4 px-2 py-5 text-center border-2 m-1 rounded-4">
                     <h3 class="mbps">600 Mbps</h3>
                     <p class="p_mbps">Fiber Unli Plan 1699</p>
                 </div>
-                <div class="col col-md-4 px-2 text-center">
+                <div class="col-12 col-md-4 px-2 py-5 text-center border-2 m-1 rounded-4">
                     <h3 class="mbps">1000 Mbps</h3>
                     <p class="p_mbps">Fiber Unli Plan 1699</p>
                 </div>
@@ -80,23 +80,23 @@
 
       </div>
     <div class="container-fluid">
-        <h1 class="col-8 text-center align-items-center m-auto p-2  ">We’ve got you covered with reliable internet that’s
+        <h1 class="col-8 text-center align-items-center m-auto py-5" style="font-size: 34px; font-weight:700;">We’ve got you covered with reliable internet that’s
             right for your home.</h1>
     </div>
 
     <div class="container-fluid">
         <div class="row">
-            <div class="col-12 col-md-4 p-5 justify-content-center text-center">
+            <div class="col-12 col-md-4 p-2 p-md-3 p-lg-4 justify-content-center text-center">
                 <img class="py-4 m-auto" src="./assets/productivity.png">
                 <h4>Be more productive than ever</h4>
                 <p>with faster speeds that Fiber Unli can provide.</p>
             </div>
-            <div class="col-12 col-md-4 p-5 justify-content-center text-center">
+            <div class="col-12 col-md-4 p-2 p-md-3 p-lg-4 justify-content-center text-center">
                 <img class="py-4 m-auto" src="./assets/stream.png">
                 <h4>There’s no limit!</h4>
                 <p>Stream to your heart’s content for as low as P899!</p>
             </div>
-            <div class="col-12 col-md-4 p-5 justify-content-center text-center">
+            <div class="col-12 col-md-4 p-2 p-md-3 p-lg-4 justify-content-center text-center">
                 <img class="py-4 m-auto" src="./assets/internet.png">
                 <h4>Win more rounds with AUJ Internet</h4>
             </div>

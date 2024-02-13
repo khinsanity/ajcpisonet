@@ -1,6 +1,6 @@
 <!-- Footer -->
 <footer class="text-center text-white" style="background-color: #FAEEE7;">
-  <div class="container p-4" style="color: #594a4e;">
+  <div class="container-fluid p-4" style="color: #594a4e;">
     <section>
       <form action="">
         <div class="row d-flex justify-content-center">
