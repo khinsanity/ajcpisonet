@@ -25,7 +25,7 @@
 
 
             /* Query here */
-            @query and screen(max-width:700px){
+            @query screen and (max-width:700px){
                 .logo{
                     display:none;
                  }
