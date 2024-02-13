@@ -2,13 +2,12 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\View\View;
 use Illuminate\Http\Request;
 
 class AJCController extends Controller
 {
-    public function internet(): View
+    public function internet()
     {
-        return view('include.internet');
+        return view('internet');
     }
 }
