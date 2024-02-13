@@ -17,7 +17,7 @@ use App\Http\Controllers\ProfileController;
 */
 
 Route::get('/', function () {
-    return view('homepage')->name('homepage');
+    return view('homepage');
 });
 
 Route::get('/dashboard', function () {
