@@ -21,7 +21,15 @@
             <a class="nav-link {{ (\Request::route()->getName() == 'applynow') ? 'active' : '' }}"  href="{{route('applynow')}}">ApplyNow</a>
           </li>
         </ul>
-        
+        @if (Route::has('login'))
+                <div class="nav-item ">
+                    @auth
+                        <a class="nav-link" href="{{ url('/dashboard') }}" >Dashboard</a>
+                    @else
+                        <a class="nav-link" href="{{ route('login') }}" >Log in</a>
+                    @endauth
+                </div>
+        @endif
       </div>
     </div>
   </nav>
