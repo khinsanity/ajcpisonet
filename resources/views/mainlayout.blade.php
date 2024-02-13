@@ -21,6 +21,15 @@
             .logo{
                 width: 120px;
             }
+
+
+
+            /* Query here */
+            @query and screen(max-width:700px){
+                .logo{
+                    display:none;
+                 }
+            }
         </style>
     </head>
     <body class="antialiased">
