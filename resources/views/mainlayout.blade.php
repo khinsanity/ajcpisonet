@@ -21,8 +21,18 @@
             .logo{
                 width: 120px;
             }
-            .nav-link{
-                font-size: 24px !important;
+           
+            .nav-link.active {
+                color: red !important;
+            }
+            .nav-link {
+                font-size: 20px;
+                text-align: center;
+            }
+
+            .nav-link:hover {
+                color: rgb(0, 0, 0);
+                text-decoration: underline;
             }
 
 
