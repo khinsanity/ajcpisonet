@@ -6,7 +6,8 @@ use Illuminate\Http\Request;
 
 class AJCController extends Controller
 {
-   public function internet(){
+    public function internet(): View
+    {
         return view('include.internet');
-   }
+    }
 }
