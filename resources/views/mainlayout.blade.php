@@ -15,7 +15,7 @@
         rel="stylesheet">
 
         <!-- Scripts -->
-        @vite(['resources/css/app.css', 'resources/js/app.js'])
+        {{-- (@vite['resources/css/app.css', 'resources/js/app.js']) --}}
 
         {{-- Bootstrap CDN CSS --}}
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
@@ -136,8 +136,8 @@
 
         .plan {
             width: 100%;
-            height: 270px;
-            padding-top: 40px;
+            height: fit-content;
+            padding: 80px;
             background: linear-gradient(rgba(111, 78, 82, 0.259), rgba(218, 194, 178, 0.719)), url(./assets/familyinternet.jpg);
             background-position: center;
             background-size: cover;
@@ -146,7 +146,8 @@
         }
 
         .mbps {
-            font-size: 32px;
+            font-size: 45px;
+            padding: 10px;
             color: #fefefe;
         }
 
