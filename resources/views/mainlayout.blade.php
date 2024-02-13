@@ -16,7 +16,8 @@
         </style>
     </head>
     <body class="antialiased">
-        
+        @include('navbar')
+      
             {{-- @if (Route::has('login'))
                 <div class="sm:fixed sm:top-0 sm:right-0 p-6 text-right z-10">
                     @auth
