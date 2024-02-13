@@ -46,3 +46,6 @@ Route::get('/promos', [AJCController::class, 'promos'])->name('promos');
 Route::get('/contactus', [AJCController::class, 'contactus'])->name('contactus');
 Route::get('/applynow', [AJCController::class, 'applynow'])->name('applynow');
 
+Route::post('/applynow', [AJCController::class, 'applynowPOST'])->name('applynowPOST');
+
+
