@@ -24,13 +24,13 @@
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    @foreach($applicant as $applicant)
+
                                     <tr class="">
                                         <td>{{$applicant->firstname}}</td>
                                         <td>{{$applicant->middlename}}</td>
                                         <td>{{$applicant->lastname}}</td>
                                     </tr>
-                                    @endforeach
+                                    
 
                                 </tbody>
                             </table>
