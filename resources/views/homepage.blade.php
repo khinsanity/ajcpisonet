@@ -98,7 +98,7 @@
             </div>
             <div class="col-12 col-md-4 p-2 p-md-3 p-lg-4 justify-content-center text-center">
                 <img class="py-4 m-auto" src="./assets/internet.png">
-                <h4>Win more rounds with AUJ Internet</h4>
+                <h4>Win more rounds with AJC Internet</h4>
             </div>
         </div>
     </div>
@@ -113,7 +113,7 @@
             <div class="col-12 col-md-6 py-5 text-center chat">
                 <h1 style="font-size:32px; font-weight:700;">Chat with Us !</h1>
                 <p>Use our AJC Pisonet FB Messenger for quick and easy assistance.</p>
-                <div class="py-5"><button class="btn btn-outline-dark rounded-2"><i class="fa-solid fa-comments btnicon px-1"></i>UJC
+                <div class="py-5"><button class="btn btn-outline-dark rounded-2"><i class="fa-solid fa-comments btnicon px-1"></i>AJC
                     Chatbot</button></div>
             </div>
             <div class="col-12 col-md-6 py-5  text-center support">
