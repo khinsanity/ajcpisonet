@@ -22,6 +22,9 @@ Route::get('/', [AJCController::class, 'homepage']);
 Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
+Route::get('/bill', function () {
+    return view('bill');
+})->middleware(['auth', 'verified'])->name('bill');
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
