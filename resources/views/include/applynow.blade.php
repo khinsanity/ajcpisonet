@@ -106,10 +106,10 @@
                 </div>
                 <div class="row mt-3">
                     <div class="col-lg-6 col-md-12 mt-md-1 p-1">
-                        <a href="/" type="button" class="form-control btn btn-danger">Cancel</a>
+                        <a href="/" type="button" class="form-control btn btn-danger text-danger">Cancel</a>
                     </div>
                     <div class="col-lg-6 col-md-12 mt-md-1 p-1">
-                        <button type="submit" class="form-control btn btn-primary text-danger">Submit</button>
+                        <button type="submit" class="form-control btn btn-primary text-dark">Submit</button>
                     </div>
                 </div>
             </div>
