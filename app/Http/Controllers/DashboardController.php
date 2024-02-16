@@ -14,22 +14,14 @@ class DashboardController extends Controller
             $usertype=Auth()->user()->usertype;
             if($usertype=='user'){
                 return view('dashboard');
-            }
-            else{
-                return view('admindashboard');
-            }
-           
+            }              
         }
         
     }
     public function admindashboard(){
         if(Auth::id()){
-          
             if($usertype=='admin'){
                 return view('admindashboard');
-            }
-            else{
-                return view('dashboard');
             }
         }
         
