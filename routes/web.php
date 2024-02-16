@@ -4,6 +4,7 @@ use App\Mail\MyMailingServices;
 use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AJCController;
+use App\Http\Controllers\ClientsController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\DashboardController;
 
@@ -26,7 +27,7 @@ Route::get('/', [AJCController::class, 'homepage']);
 Route::middleware(['auth', 'verified'])->group(function () {
     Route::get('/dashboard', [DashboardController::class, 'dashboard'])->name('dashboard');
     Route::get('/admindashboard', [DashboardController::class, 'admindashboard'])->name('admindashboard');
-    Route::get('/addClient', [DashboardController::class, 'addClient'])->name('addClient');
+    Route::get('/addClient', [ClientsController::class, 'addClient'])->name('addClient');
 });
 // Route::get('/dashboard', function () {
 //     return view('dashboard');
