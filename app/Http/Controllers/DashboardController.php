@@ -15,7 +15,7 @@ class DashboardController extends Controller
             if($usertype=='user'){
                 return view('dashboard');
             }
-            else if($user=='admin'){
+            else if($usertype=='admin'){
                 return view('admindashboard');
             }
         }
