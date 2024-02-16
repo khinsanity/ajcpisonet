@@ -21,12 +21,12 @@ use App\Http\Controllers\DashboardController;
 
 Route::get('/', [AJCController::class, 'homepage']);
 
-<<<<<<< HEAD
+
 Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
 
-=======
+
 
 
 
@@ -38,7 +38,7 @@ Route::middleware(['auth', 'verified'])->group(function () {
 // Route::get('/dashboard', function () {
 //     return view('dashboard');
 // })->middleware(['auth', 'verified'])->name('dashboard');
->>>>>>> 93f2c833decd8d365c79ba7b62185f726ea66a6b
+
 Route::get('/bill', function () {
     return view('bill');
 })->middleware(['auth', 'verified'])->name('bill');
