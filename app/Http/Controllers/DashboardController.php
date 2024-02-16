@@ -10,6 +10,7 @@ use Illuminate\Support\Facades\Auth;
 class DashboardController extends Controller
 {
     public function dashboard(){
+
         if(Auth::id()){
             $usertype=Auth()->user()->usertype;
             if($usertype=='user'){
@@ -19,6 +20,9 @@ class DashboardController extends Controller
         
     }
     public function admindashboard(){
+        if(Auth::user()->usertype!='admin'){
+            return redirect(route('dashboard'));
+        }
         if(Auth::id()){
             if($usertype=='admin'){
                 return view('admindashboard');
