@@ -8,18 +8,11 @@ class ClientsController extends Controller
 {
 
     public function addClient(){
-        // if(Auth::check()){
-        //     return redirect(route('dashboard'));
-        // }
         return view('include.addClient');
     }
 
     // Add Client post request
     function addClientPost(Request $request){
-        if(Auth::check()){
-            return redirect(route('dashboard'));
-        }
-
 
         $request->validate([
             'firstname' => 'required'

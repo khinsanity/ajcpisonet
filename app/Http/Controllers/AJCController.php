@@ -98,4 +98,8 @@ class AJCController extends Controller
         return view('dashboard', ['applicants'=> $applicants]);
     }
 
+    public function bill(){
+        return view('bill');
+    }
+
 }
