@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class ClientsController extends Controller
 {
@@ -16,22 +17,22 @@ class ClientsController extends Controller
     }
 
     // Add Client post request
-    function addClientPost(Request $request){
-        // to avoid unauthorized access
-        if(Auth::user()->usertype!='admin'){
-            return redirect(route('dashboard'));
-        }
-        $request->validate([
-            'firstname' => 'required'
-        ]);
+    // function addClientPost(Request $request){
+    //     // to avoid unauthorized access
+    //     if(Auth::user()->usertype!='admin'){
+    //         return redirect(route('dashboard'));
+    //     }
+    //     $request->validate([
+    //         'firstname' => 'required'
+    //     ]);
 
-        $data['firstname'] = $request->firstname;
+    //     $data['firstname'] = $request->firstname;
        
-        $applicants = Application::create($data);
+    //     $applicants = Application::create($data);
 
-        if(!$applicants){
-            return redirect(route('applynow'))->with("error", "Application failed, please try again");
-        }
-        return redirect(route('applynow'))->with("success", "Application submitted, Please wait for email, text or call");
-    }
+    //     if(!$applicants){
+    //         return redirect(route('applynow'))->with("error", "Application failed, please try again");
+    //     }
+    //     return redirect(route('applynow'))->with("success", "Application submitted, Please wait for email, text or call");
+    // }
 }
