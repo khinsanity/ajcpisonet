@@ -53,12 +53,14 @@
         <div class="row ">
             <div class="row">
                 <div class="col col-md-2"><span></span></div>
-                <a href="{{route('applynow')}}">
+                
                 <div class="col-12 col-md-4 px-2 py-5 text-center border-e-2 border-2 m-1 rounded-4 ">
+                <a href="{{route('applynow')}}">
                     <h3 class="mbps">20 Mbps</h3>
                     <p class="p_mbps">Fiber Unli Plan 899</p>
+</a>
                 </div>
-                </a>
+            
                 <div class="col-12 col-md-4 px-2 py-5 text-center border-2 m-1 rounded-4">
                     <h3 class="mbps">30 Mbps</h3>
                     <p class="p_mbps">Fiber Unli Plan 1000</p>
