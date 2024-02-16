@@ -19,9 +19,11 @@ use App\Http\Controllers\ProfileController;
 
 Route::get('/', [AJCController::class, 'homepage']);
 
-Route::get('/dashboard', function () {
-    return view('dashboard');
-})->middleware(['auth', 'verified'])->name('dashboard');
+
+Route::get('/dashboard', [AJCController::class, 'dashboard'])->middleware(['auth', 'verified'])->name('dashboard');
+// Route::get('/dashboard', function () {
+//     return view('dashboard');
+// })->middleware(['auth', 'verified'])->name('dashboard');
 Route::get('/bill', function () {
     return view('bill');
 })->middleware(['auth', 'verified'])->name('bill');
@@ -31,6 +33,19 @@ Route::middleware('auth')->group(function () {
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
+
+Route::get('/apply_899',function(){
+    return view('include.20mbps');
+})->name('20mbps');
+Route::get('/apply_1000',function(){
+    return view('include.30mbps');
+})->name('30mbps');
+Route::get('/apply_1300',function(){
+    return view('include.50mbps');
+})->name('50mbps');
+Route::get('/apply_1500',function(){
+    return view('include.100mbps');
+})->name('100mbps');
 
 require __DIR__.'/auth.php';
 
@@ -50,3 +65,4 @@ Route::get('/applynow', [AJCController::class, 'applynow'])->name('applynow');
 Route::post('/applynow', [AJCController::class, 'applynowPOST'])->name('applynowPOST');
 
 
+Route::post('/dashboard', [AJCController::class, 'applicantdata'])->name('applicantdata');
