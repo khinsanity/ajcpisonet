@@ -1,8 +1,8 @@
 @extends('mainlayout')
 @section('title', 'AJC-Apply')
 @section('content')
-<div class="container-fluid mb-5 sm-mb-5">
-    <div class="row d-flex justify-content-center mt-3">
+<div class="container-fluid">
+    <div class="row d-flex justify-content-center mt-3 mb-5">
         <div class="row">
             <div class="mt-5">
                 @if($errors->any())
