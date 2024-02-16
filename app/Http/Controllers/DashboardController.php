@@ -10,13 +10,12 @@ use Illuminate\Support\Facades\Auth;
 class DashboardController extends Controller
 {
     public function dashboard(){
-        
+        if(Auth::user()->usertype!='user'){
+            return redirect(route('admindashboard'));
+        }
         if(Auth::id()){
             $usertype=Auth()->user()->usertype;
-            if($usertype=='user'){
-                if(Auth::user()->usertype!='user'){
-                    return redirect(route('admindashboard'));
-                }
+            if($usertype==='user'){
                 return view('dashboard');
             }              
         }
