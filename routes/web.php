@@ -65,4 +65,5 @@ Route::get('/applynow', [AJCController::class, 'applynow'])->name('applynow');
 Route::post('/applynow', [AJCController::class, 'applynowPOST'])->name('applynowPOST');
 
 
-Route::post('/dashboard', [AJCController::class, 'applicantdata'])->name('applicantdata');
+Route::get('/dashboard', [AJCController::class, 'show'])->name('dashboard');
+
