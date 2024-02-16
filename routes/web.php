@@ -20,9 +20,19 @@ use App\Http\Controllers\DashboardController;
 */
 
 Route::get('/', [AJCController::class, 'homepage']);
-Route::get('/dashboard', [DashboardController::class, 'dashboard'])->middleware(['auth', 'verified'])->name('dashboard');
-Route::get('/admindashboard', [DashboardController::class, 'admindashboard'])->middleware(['auth', 'verified'])->name('admindashboard');
-Route::get('/addClient', [ClientsController::class, 'addClient'])->name('addClient');
+
+
+
+
+
+Route::middleware(['auth', 'verified'])->group(function () {
+    Route::get('/dashboard', [DashboardController::class, 'dashboard'])->name('dashboard');
+    Route::get('/admindashboard', [DashboardController::class, 'admindashboard'])->name('admindashboard');
+    Route::get('/addClient', [ClientsController::class, 'addClient'])->name('addClient');
+    
+});
+
+
 
 Route::get('/bill', function () {
     return view('bill');
