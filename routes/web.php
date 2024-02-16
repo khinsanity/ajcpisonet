@@ -4,7 +4,9 @@ use App\Mail\MyMailingServices;
 use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AJCController;
+use App\Http\Controllers\ClientsController;
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\DashboardController;
 
 /*
 |--------------------------------------------------------------------------
@@ -19,10 +21,24 @@ use App\Http\Controllers\ProfileController;
 
 Route::get('/', [AJCController::class, 'homepage']);
 
+<<<<<<< HEAD
 Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
 
+=======
+
+
+
+Route::middleware(['auth', 'verified'])->group(function () {
+    Route::get('/dashboard', [DashboardController::class, 'dashboard'])->name('dashboard');
+    Route::get('/admindashboard', [DashboardController::class, 'admindashboard'])->name('admindashboard');
+    Route::get('/addClient', [ClientsController::class, 'addClient'])->name('addClient');
+});
+// Route::get('/dashboard', function () {
+//     return view('dashboard');
+// })->middleware(['auth', 'verified'])->name('dashboard');
+>>>>>>> 93f2c833decd8d365c79ba7b62185f726ea66a6b
 Route::get('/bill', function () {
     return view('bill');
 })->middleware(['auth', 'verified'])->name('bill');
@@ -36,6 +52,15 @@ Route::middleware('auth')->group(function () {
 Route::get('/apply_899',function(){
     return view('include.20mbps');
 })->name('20mbps');
+Route::get('/apply_1000',function(){
+    return view('include.30mbps');
+})->name('30mbps');
+Route::get('/apply_1300',function(){
+    return view('include.50mbps');
+})->name('50mbps');
+Route::get('/apply_1500',function(){
+    return view('include.100mbps');
+})->name('100mbps');
 
 require __DIR__.'/auth.php';
 

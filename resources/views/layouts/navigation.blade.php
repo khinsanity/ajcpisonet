@@ -11,6 +11,21 @@
                 </div>
 
                 <!-- Navigation Links -->
+              
+                <!--Admin type -->
+                @if(Auth::user()->usertype=='admin')
+                <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">
+                    <x-nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard')">
+                        {{ __('Dashboard') }}
+                    </x-nav-link>
+                </div>
+                <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">
+                    <x-nav-link :href="route('addClient')" :active="request()->routeIs('addClient')">
+                        {{ __('AddClient') }}
+                    </x-nav-link>
+                </div>
+                @else
+                <!--User type -->
                 <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">
                     <x-nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard')">
                         {{ __('Dashboard') }}
@@ -21,6 +36,8 @@
                         {{ __('Bill') }}
                     </x-nav-link>
                 </div>
+                @endif
+          
             </div>
 
             <!-- Settings Dropdown -->
