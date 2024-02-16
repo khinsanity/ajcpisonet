@@ -29,14 +29,11 @@ Route::middleware(['auth', 'verified'])->group(function () {
     Route::get('/dashboard', [DashboardController::class, 'dashboard'])->name('dashboard');
     Route::get('/admindashboard', [DashboardController::class, 'admindashboard'])->name('admindashboard');
     Route::get('/addClient', [ClientsController::class, 'addClient'])->name('addClient');
+    Route::get('/bill', [ClientsController::class, 'bill'])->name('bill');
     
 });
 
 
-
-Route::get('/bill', function () {
-    return view('bill');
-})->middleware(['auth', 'verified'])->name('bill');
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
