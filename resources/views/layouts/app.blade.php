@@ -26,8 +26,11 @@
                 .logo{
                     width: 80px;
                  }
-                 .table-responsive, .edit, .delete{
+                 .table-responsive{
                     font-size: 10px !important;
+                 }
+                 .edit, .delete{
+                    width: 8px;
                  }
                  
             }
