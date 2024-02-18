@@ -36,6 +36,9 @@ Route::middleware(['auth', 'verified'])->group(function () {
     Route::get('/admindashboard', [ClientsController::class, 'createClientadmin'])->name('admindashboard');
 
     Route::get('/bill', [AJCController::class, 'bill'])->name('bill');
+
+    // new
+    Route::get('clients', [AllclientController::class, 'index'])->name('index');
 });
 
 
@@ -76,7 +79,7 @@ Route::get('/applynow', [AJCController::class, 'applynow'])->name('applynow');
 Route::post('/applynow', [ClientsController::class, 'applynowPOST'])->name('applynowPOST');
 
 
-Route::get('clients', [AllclientController::class, 'index'])->name('index');
+
 
 
 
