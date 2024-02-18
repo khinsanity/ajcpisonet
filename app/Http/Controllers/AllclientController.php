@@ -49,4 +49,9 @@ class AllclientController extends Controller
         ]);
         return redirect()->back()->with('status', 'Client Updated');
     }
+    public function deleteclient(int $id){
+        $client = Allclient::findOrFail($id);
+        $client->delete();
+        return redirect()->back()->with('status', 'Client Deleted');
+    }
 }
