@@ -36,8 +36,8 @@
                                         <td>{{$item->plan}}</td>
                                         <td>{{$item->accountNumber}}</td>
                                         <td>
-                                            <a href="">Edit</a>
-                                            <a href="">Delete</a>
+                                            <a href="{{route('clients/'.$item->id.'/edit')}}" class="btn btn-success mx-3">Edit</a>
+                                            <a href="" class="btn btn-danger mx-3">Delete</a>
                                         </td>
                                     </tr>
                                 @endforeach
