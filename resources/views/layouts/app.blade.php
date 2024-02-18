@@ -26,9 +26,10 @@
                 .logo{
                     width: 80px;
                  }
-                 .table-responsive{
+                 .table-responsive, .edit, .delete{
                     font-size: 12px !important;
                  }
+                 
             }
     </style>
     </head>
