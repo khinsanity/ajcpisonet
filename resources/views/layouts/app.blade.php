@@ -27,7 +27,7 @@
                     width: 80px;
                  }
                  .table-responsive{
-                    font-size: 8px !important;
+                    font-size: 12px !important;
                  }
             }
     </style>
