@@ -30,4 +30,8 @@ class AllclientController extends Controller
         return redirect('createclient')->with('status','Client Added');
 
     }
+    public function edit(int $id){
+        $client = Allclient::findOrFail($id);
+        return $client;
+    }
 }
