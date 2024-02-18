@@ -55,6 +55,10 @@
                 text-decoration: underline;
             }
 
+            .promo_link.active{
+                color: red !important;
+            }
+
 
 
             /* Query here */
@@ -138,6 +142,14 @@
             width: 100%;
             height: fit-content;
             padding: 80px;
+            background: linear-gradient(rgba(111, 78, 82, 0.259), rgba(218, 194, 178, 0.719)), url(./assets/familyinternet.jpg);
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+            position: relative;
+        }
+        .plan2{
+            padding: 80px 0;
             background: linear-gradient(rgba(111, 78, 82, 0.259), rgba(218, 194, 178, 0.719)), url(./assets/familyinternet.jpg);
             background-position: center;
             background-size: cover;

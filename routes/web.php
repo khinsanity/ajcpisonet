@@ -22,13 +22,19 @@ use App\Http\Controllers\DashboardController;
 Route::get('/', [AJCController::class, 'homepage']);
 
 Route::middleware(['auth', 'verified'])->group(function () {
+
     Route::get('/dashboard', [DashboardController::class, 'dashboard'])->name('dashboard');
-    Route::get('/dashboard', [AJCController::class, 'show'])->name('dashboard');
     Route::get('/admindashboard', [DashboardController::class, 'admindashboard'])->name('admindashboard');
-    Route::get('/addClient', [ClientsController::class, 'addClient'])->name('addClient');
+
+    Route::get('/addclient', [ClientsController::class, 'addClient'])->name('addClient');
     Route::get('/newapplication', [ClientsController::class, 'newapplication'])->name('newapplication');
+    Route::get('/newapplication', [ClientsController::class, 'show'])->name('newapplication');
+
+    Route::post('/addclient', [ClientsController::class, 'clientPost'])->name('clientPOST');
+    Route::get('/addclient', [ClientsController::class, 'createClient'])->name('addClient');
+    Route::get('/admindashboard', [ClientsController::class, 'createClientadmin'])->name('admindashboard');
+
     Route::get('/bill', [AJCController::class, 'bill'])->name('bill');
-    
 });
 
 
@@ -66,6 +72,9 @@ Route::get('/internet', [AJCController::class, 'internet'])->name('internet');
 Route::get('/promos', [AJCController::class, 'promos'])->name('promos');
 Route::get('/contactus', [AJCController::class, 'contactus'])->name('contactus');
 Route::get('/applynow', [AJCController::class, 'applynow'])->name('applynow');
-Route::post('/applynow', [AJCController::class, 'applynowPOST'])->name('applynowPOST');
+Route::post('/applynow', [ClientsController::class, 'applynowPOST'])->name('applynowPOST');
+
+
+
 
 
