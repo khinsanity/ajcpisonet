@@ -31,6 +31,7 @@
                  }
                  .edit, .delete{
                     width: 8px;
+                    height: 8px;
                  }
                  
             }
