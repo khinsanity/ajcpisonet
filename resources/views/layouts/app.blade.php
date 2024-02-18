@@ -26,6 +26,9 @@
                 .logo{
                     width: 80px;
                  }
+                 .table-responsive{
+                    font-size: 8px !important;
+                 }
             }
     </style>
     </head>
