@@ -30,8 +30,8 @@
                     font-size: 10px !important;
                  }
                  .edit, .delete{
-                    width: 8px;
-                    height: 8px;
+                    width: 8;
+                    height: 8;
                  }
                  
             }
