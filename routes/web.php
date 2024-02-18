@@ -39,6 +39,7 @@ Route::middleware(['auth', 'verified'])->group(function () {
 
     // new
     Route::get('clients', [AllclientController::class, 'index'])->name('index');
+    Route::get('createclient', [AllclientController::class, 'createclient'])->name('createclient');
 });
 
 
