@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Allclient;
 use Illuminate\Http\Request;
 
 class AllclientController extends Controller
