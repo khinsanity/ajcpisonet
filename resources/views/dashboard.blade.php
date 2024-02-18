@@ -11,6 +11,7 @@
                 <div class="p-6 text-gray-900">
                     @if(Auth::user()->accountNumber==0)
                         <h1>Its zero</h1>
+                        {{Auth::user()->id}}
                     @else
                         <h1>It is not Zero</h1>
                     @endif
