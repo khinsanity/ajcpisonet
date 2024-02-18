@@ -21,7 +21,7 @@
                     <div class="card-body">
                         <form action="{{url('clients/'.$client->id.'/edit)}}" method="POST">
                             @csrf
-                            @method('PUT')
+                            
                             <div class="mb-3">
                                 <label>Fullname</label>
                                 <input type="text" class="form-control uppercase" name="fullname" value="{{old('name')}}" capitalize />
