@@ -25,11 +25,8 @@
                                         <th>Address</th>
                                         <th>Plan</th>
                                         <th>Account#</th>
-                                        <th>
-                                            <tr>
-                                                <th>Action</th>
-                                            </tr>
-                                        </th>
+                                        <th>Edit</th>
+                                        <th>Delete</th>
                                     </tr>
                                 </thead>
                                 <tbody>
