@@ -9,7 +9,7 @@ class AllclientController extends Controller
 {
     public function admindashboard(){
         $clientsdata = Allclient::get();
-        return 'hello';
+        return view('admindashboard', compact('clientsdata'));
     }
 
     public function createclient(){
@@ -53,7 +53,7 @@ class AllclientController extends Controller
         ]);
         return redirect()->back()->with('status', 'Client Updated');
     }
-
+    
     public function deleteclient(int $id){
         $client = Allclient::findOrFail($id);
         $client->delete();
