@@ -19,9 +19,9 @@ class AllclientController extends Controller
 
     public function storeclient(Request $request){
         $request->validate([
-            'fullname'=> ['required','unique:allclients'],
-            'plan'=> ['required'],
-            'accountnumber'=> ['required','unique:clients,accountnumber'],
+            'fullname'=> 'required',
+            'plan'=> 'required',
+            'accountnumber'=> 'required'
         ]);
         Allclient::create([
             'fullname' => $request->fullname,
