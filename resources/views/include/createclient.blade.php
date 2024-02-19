@@ -15,7 +15,7 @@
                    <div class="card">
                     <div class="card-header">
                         <h4>Add Client
-                            <a href="{{route('index')}}" class="btn btn-primary float-end">Back</a>
+                            <a href="{{route('admindashboard')}}" class="btn btn-primary float-end">Back</a>
                         </h4>
                     </div>
                     <div class="card-body">
@@ -23,12 +23,12 @@
                             @csrf
                             <div class="mb-3">
                                 <label>Fullname</label>
-                                <input type="text" class="form-control uppercase" name="fullname" value="{{old('name')}}"  />
+                                <input type="text" class="form-control" name="fullname" value="{{old('name')}}" style="text-transform: capitalize" />
                                 @error('fullname') <span class="text-danger">{{$message}}</span>@enderror
                             </div>
                             <div class="mb-3">
                                 <label>Address</label>
-                                <input type="text" class="form-control uppercase" name="address" value="{{old('address')}}"  />
+                                <input type="text" class="form-control" name="address" value="{{old('address')}}" style="text-transform: capitalize" />
                                 @error('address') <span class="text-danger">{{$message}}</span>@enderror
                             </div>
                             <div class="mb-3">

@@ -8,6 +8,7 @@ use App\Http\Controllers\ClientsController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\AllclientController;
 use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\ApplicationController;
 
 /*
 |--------------------------------------------------------------------------
@@ -25,26 +26,24 @@ Route::get('/', [AJCController::class, 'homepage']);
 Route::middleware(['auth', 'verified'])->group(function () {
 
     Route::get('/dashboard', [DashboardController::class, 'dashboard'])->name('dashboard');
-    Route::get('/admindashboard', [DashboardController::class, 'admindashboard'])->name('admindashboard');
-
-    Route::get('/addclient', [ClientsController::class, 'addClient'])->name('addClient');
-    Route::get('/newapplication', [ClientsController::class, 'newapplication'])->name('newapplication');
-    Route::get('/newapplication', [ClientsController::class, 'show'])->name('newapplication');
-
-    Route::post('/addclient', [ClientsController::class, 'clientPost'])->name('clientPOST');
-    Route::get('/addclient', [ClientsController::class, 'createClient'])->name('addClient');
-    Route::get('/admindashboard', [ClientsController::class, 'createClientadmin'])->name('admindashboard');
-
+    Route::get('/admindashboard', [AllclientController::class, 'admindashboard'])->name('admindashboard');
     Route::get('/bill', [AJCController::class, 'bill'])->name('bill');
 
-    // new
-    Route::get('clients', [AllclientController::class, 'index'])->name('index');
+    // CRUD clients
     Route::get('createclient', [AllclientController::class, 'createclient'])->name('createclient');
     Route::post('createclient', [AllclientController::class, 'storeclient'])->name('storeclient');
     Route::get('clients/{id}/edit', [AllclientController::class, 'edit']);
     Route::put('clients/{id}/edit', [AllclientController::class, 'update']);
     Route::get('clients/{id}/delete', [AllclientController::class, 'deleteclient']);
+
+    // For new Application admin dashboard
+    Route::get('/newapplication', [AllclientController::class, 'newapplication'])->name('newapplication');
+    Route::get('newapplication/{id}/delete', [AllclientController::class, 'deletenewapplication']);
+
+
+
 });
+
 
 
 
@@ -81,7 +80,7 @@ Route::get('/internet', [AJCController::class, 'internet'])->name('internet');
 Route::get('/promos', [AJCController::class, 'promos'])->name('promos');
 Route::get('/contactus', [AJCController::class, 'contactus'])->name('contactus');
 Route::get('/applynow', [AJCController::class, 'applynow'])->name('applynow');
-Route::post('/applynow', [ClientsController::class, 'applynowPOST'])->name('applynowPOST');
+Route::post('/applynow', [ApplicationController::class, 'applynowPOST'])->name('applynowPOST');
 
 
 

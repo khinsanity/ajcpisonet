@@ -6,6 +6,7 @@
         <meta name="csrf-token" content="{{ csrf_token() }}">
 
         <title>{{ config('app.name', 'AJC Pisonet') }}</title>
+        <link rel="icon" type="image/x-icon" href="/assets/agclogo.png">
 
         <!-- Fonts -->
         <link rel="preconnect" href="https://fonts.bunny.net">
@@ -26,6 +27,14 @@
                 .logo{
                     width: 80px;
                  }
+                 .table-responsive{
+                    font-size: 10px !important;
+                 }
+                 .edit, .delete{
+                    width: 8 !important;
+                    height: 8 !important;
+                 }
+                 
             }
     </style>
     </head>

@@ -1,7 +1,7 @@
 <x-app-layout>
-    <x-slot name="header">
+  <x-slot name="header">
         <h2 class="font-semibold text-xl text-gray-800 leading-tight">
-            {{ __('Dashboard') }}
+            {{ __('Update Client') }}
         </h2>
     </x-slot>
 
@@ -10,12 +10,12 @@
             <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
                 <div class="p-6 text-gray-900">
                     @if(session('status'))
-                        <div class="alert alert-success">{{session('status')}}</div>
+                        <div class="alert alert-success">{{session('status')}}</div>  
                     @endif
                    <div class="card">
                     <div class="card-header">
                         <h4>Edit Clients
-                            <a href="{{route('index')}}" class="btn btn-primary float-end">Back</a>
+                            <a href="{{route('admindashboard')}}" class="btn btn-primary float-end">Back</a>
                         </h4>
                     </div>
                     <div class="card-body">
@@ -44,7 +44,7 @@
                             </div>
                             <div class="mb-3">
                                 <button type="submit" class="btn btn-primary">Update</button>
-                            </div>    
+                            </div>
                         </form>
                     </div>
                    </div>
@@ -54,4 +54,4 @@
             </div>
         </div>
     </div>
-</x-app-layout>
+</x-app-layout> 
