@@ -21,7 +21,8 @@ class AllclientController extends Controller
         $request->validate([
             'fullname'=> 'required',
             'address' => 'required',
-            'plan'=> 'required'
+            'plan'=> 'required',
+            'accountNumber'=> 'required'
         ]);
         Allclient::create([
             'fullname' => $request->fullname,
