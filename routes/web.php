@@ -36,6 +36,9 @@ Route::middleware(['auth', 'verified'])->group(function () {
     Route::put('clients/{id}/edit', [AllclientController::class, 'update']);
     Route::get('clients/{id}/delete', [AllclientController::class, 'deleteclient']);
 
+    Route::get('/newapplication', [AllclientController::class, 'newapplication'])->name('newapplication');
+
+
 
 });
 

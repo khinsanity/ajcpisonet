@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Allclient;
+use App\Models\Application;
 use Illuminate\Http\Request;
 
 class AllclientController extends Controller
@@ -60,7 +61,10 @@ class AllclientController extends Controller
         return redirect()->back()->with('status', 'Client Deleted');
     }
 
+    // New Application Routes
     public function newApplication(){
-        return view('newapplication');
+        $applicants = Application::get();
+        return view('newapplication', compact('applicants'));
     }
+
 }

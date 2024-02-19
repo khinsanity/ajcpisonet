@@ -25,6 +25,11 @@
                         {{ __('Dashboard') }}
                     </x-nav-link>
                 </div>
+                <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">
+                    <x-nav-link :href="route('newapplication')" :active="request()->routeIs('newapplication')">
+                        {{ __('NewApplications') }}
+                    </x-nav-link>
+                </div>
                 @else
                 <!--User type -->
                 <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">
@@ -95,6 +100,9 @@
             @if(Auth::user()->usertype=='admin')
                 <x-responsive-nav-link :href="route('admindashboard')" :active="request()->routeIs('admindashboard')">
                     {{ __('Dashboard') }}
+                </x-responsive-nav-link>
+                <x-responsive-nav-link :href="route('newapplication')" :active="request()->routeIs('newapplication')">
+                    {{ __('NewApplication') }}
                 </x-responsive-nav-link>
             @else
                 <x-responsive-nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard')">
