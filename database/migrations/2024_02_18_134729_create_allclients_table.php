@@ -16,7 +16,7 @@ return new class extends Migration
             $table->string('fullname');
             $table->string('address');
             $table->string('plan');
-            $table->string('accountNumber');
+            $table->integer('accountNumber')->default(0);
             $table->timestamps();
         });
     }
