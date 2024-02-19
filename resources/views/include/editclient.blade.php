@@ -23,7 +23,7 @@
         <div class="max-w-10xl mx-auto sm:px-6 lg:px-8">
             <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
                 <div class="p-6 text-gray-900">
-                    {{-- @if(session('status'))
+                    @if(session('status'))
                         <div class="alert alert-success">{{session('status')}}</div>  
                     @endif
                    <div class="card">
@@ -33,7 +33,7 @@
                         </h4>
                     </div>
                     <div class="card-body">
-                        <form action="{{url('clients/'.$client->id.'/edit')}}" method="POST">
+                        <form action="{{url('admindashboard/clients/'.$client->id.'/edit')}}" method="POST">
                             @csrf
                             @method('PUT')
                             <div class="mb-3">
@@ -61,7 +61,7 @@
                             </div>
                         </form>
                     </div>
-                   </div> --}}
+                   </div>
                    
 
                 </div>
