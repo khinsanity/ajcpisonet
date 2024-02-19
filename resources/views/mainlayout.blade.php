@@ -517,7 +517,7 @@
             display: inline-block;
             text-align: center;
             color: #fff;
-            background-color: #f0525f;
+            background-color: #78096D;
             box-shadow: none;
             transition: all .2s ease-in-out;
             left: 6%;
