@@ -30,7 +30,7 @@
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    @foreach ($data as $item)
+                                    @foreach ($clientsdata as $item)
                                         <tr>
                                             <td>{{$item->id}}</td>
                                             <td>{{$item->fullname}}</td>

@@ -8,8 +8,8 @@ use Illuminate\Http\Request;
 class AllclientController extends Controller
 {
     public function admindashboard(){
-        $data = Allclient::get();
-        return $data;
+        $clientsdata = Allclient::get();
+        return view('admindashboard', compact('clientsdata'));
     }
 
     public function createclient(){
