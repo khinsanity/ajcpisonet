@@ -1,13 +1,13 @@
 <x-app-layout>
     <x-slot name="header">
         <h2 class="font-semibold text-xl text-gray-800 leading-tight">
-            {{ 
+           
             @if(Auth::user()->accountNumber==0)
-                __('No Account Linked') 
+            {{  __('No Account Linked') }}
             @else
-                __('Dashboard') 
+             {{ __('Dashboard')  }}   
                 
-            @endif  }}
+            @endif  
         </h2>
     </x-slot>
 
