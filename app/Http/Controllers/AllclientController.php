@@ -59,4 +59,8 @@ class AllclientController extends Controller
         $client->delete();
         return redirect()->back()->with('status', 'Client Deleted');
     }
+
+    public function newApplication(){
+        return view('newapplication')
+    }
 }

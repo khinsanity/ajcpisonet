@@ -28,12 +28,14 @@ Route::middleware(['auth', 'verified'])->group(function () {
     Route::get('/admindashboard', [AllclientController::class, 'admindashboard'])->name('admindashboard');
     Route::get('/bill', [AJCController::class, 'bill'])->name('bill');
 
-    // new
+    // CRUD clients
     Route::get('createclient', [AllclientController::class, 'createclient'])->name('createclient');
     Route::post('createclient', [AllclientController::class, 'storeclient'])->name('storeclient');
     Route::get('clients/{id}/edit', [AllclientController::class, 'edit']);
     Route::put('clients/{id}/edit', [AllclientController::class, 'update']);
     Route::get('clients/{id}/delete', [AllclientController::class, 'deleteclient']);
+
+    
 });
 
 
