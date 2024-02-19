@@ -11,14 +11,14 @@ class ApplicationController extends Controller
 {
     function applynowPOST(Request $request){
         $request->validate([
-            'firstname' => ['required', 'string', 'max:255'],
+            'firstname' => ['required, string', 'max:255'],
             'middlename' => ['required', 'string', 'max:255'],
             'lastname' => ['required', 'string', 'max:255'],
             'contact' => ['required', 'numeric', 'max:255'],
             'birthday' => ['required'],
             'gender' => ['required'],
             'plan' => ['required'],
-            'email' => ['required','email|unique:applications,email'],
+            'email' => ['required,unique:applications'],
             'street' => ['required', 'string', 'max:255'],
             'barangay' => ['required', 'numeric', 'max:255'],
             'town' => ['required', 'string', 'max:255'],
