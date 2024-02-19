@@ -8,7 +8,7 @@ use App\Models\User;
 use App\Models\Application;
 use Illuminate\Http\Request;
 
-class applicationController extends Controller
+class ApplicationController extends Controller
 {
     function applynowPOST(Request $request){
         $request->validate([
