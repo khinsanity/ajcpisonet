@@ -31,7 +31,7 @@
                                 </thead>
                                 <tbody>
                                     @foreach ($clientsdata as $item)
-                                        <tr>
+                                        <tr class="text-nowrap">
                                             <td>{{$item->id}}</td>
                                             <td>{{$item->fullname}}</td>
                                             <td>{{$item->address}}</td>
