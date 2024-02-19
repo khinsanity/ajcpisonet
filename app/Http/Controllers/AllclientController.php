@@ -9,6 +9,11 @@ use Illuminate\Http\Request;
 class AllclientController extends Controller
 {
     public function admindashboard(){
+        if(Auth::check()){
+            if(Auth::user()->usertype=='user'){
+                return redirect(route('dashboard'));
+            }
+        }
         $clientsdata = Allclient::get();
         return view('admindashboard', compact('clientsdata'));
     }
