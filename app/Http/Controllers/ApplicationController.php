@@ -4,7 +4,6 @@ namespace App\Http\Controllers;
 
 use Auth;
 use Hash;
-use App\Models\User;
 use App\Models\Application;
 use Illuminate\Http\Request;
 
