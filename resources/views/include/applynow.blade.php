@@ -57,13 +57,13 @@
                             <option value="1300">1300</option>
                             <option value="1500">1500</option>
                         </select>
-                        <x-input-error :messages="$errors->apply->get('plan')" class="mt-2 text-red-400" />
+                        <x-input-error :messages="$errors->apply->get('plan')" class="mt-2 text-danger-400" />
                     </div>
                 </div>
                 <div class="row">
                     <div class="col mt-md-1 p-1">
                         <input type="text" name="email" class="form-control" placeholder="Email Address"/>
-                        <x-input-error :messages="$errors->apply->get('email')" class="mt-2 text-red-400" />
+                        <x-input-error :messages="$errors->apply->get('email')" class="mt-2 text-danger-400" />
                     </div>
                 </div>
                 <div class="col">
@@ -72,17 +72,20 @@
                 <div class="row">
                     <div class="col-lg-6 col-md-12 mt-md-1 p-1">
                         <input type="text" name="street" class="form-control" placeholder="Street/Zone/Purok" style="text-transform:capitalize"/>
-                        <x-input-error :messages="$errors->apply->get('street')" class="mt-2 text-red-400" />
+                        <x-input-error :messages="$errors->apply->get('street')" class="mt-2 text-danger-400" />
                     </div>
                     <div class="col-lg-6 col-md-12 mt-md-1 p-1">
                         <input type="text" name="barangay" class="form-control"  placeholder="Barangay" style="text-transform:capitalize"/>
-                        <x-input-error :messages="$errors->apply->get('barangay')" class="mt-2 text-red-400" />
+
+                        <x-input-error :messages="$errors->apply->get('barangay')" class="mt-2 text-danger-400"/>
+
+
                     </div>
                 </div>
                 <div class="row">
                     <div class="col-lg-6 col-md-12 mt-md-1 p-1">
                         <input type="text" name="town" class="form-control"  placeholder="Town/District/Municipality" style="text-transform:capitalize"/>
-                        <x-input-error :messages="$errors->apply->get('town')" class="mt-2 text-red-400" />
+                        <x-input-error :messages="$errors->apply->get('town')" class="mt-2 text-danger-400" />
                     </div>
                     <div class="col-lg-6 col-md-12 mt-md-1 p-1">
                         <input type="text" name="province" class="form-control"  placeholder="Province" style="text-transform:capitalize"/>
@@ -92,19 +95,19 @@
                 <div class="row">
                     <div class="col mt-md-1 p-1">
                         <input type="text" name="landmark" class="form-control"  placeholder="Landmark" style="text-transform:capitalize"/>
-                        <x-input-error :messages="$errors->apply->get('landmark')" class="mt-2 text-red-400" />
+                        <x-input-error :messages="$errors->apply->get('landmark')" class="mt-2 text-danger-400" />
                     </div>
                 </div>
                 <div class="row">
                     <div class="col-lg-6 col-md-12 mt-md-1 p-1">
                         <label for="uploadid" class="ms-2 text-body-secondary">Upload ID</label>
                         <input type="file" accept="image/" capture name="uploadid" class="form-control text-body-secondary"  placeholder="Upload ID"/>
-                        <x-input-error :messages="$errors->apply->get('uploadid')" class="mt-2 text-red-400" />
+                        <x-input-error :messages="$errors->apply->get('uploadid')" class="mt-2 text-danger-400" />
                     </div>
                     <div class="col-lg-6 col-md-12 mt-md-1 p-1">
                         <label for="idselfie" class="ms-2 text-body-secondary">Selfie with ID</label>
                         <input type="file" accept="image/" capture  name="idselfie" class="form-control text-body-secondary"  placeholder="Upload ID"/>
-                        <x-input-error :messages="$errors->apply->get('idselfie')" class="mt-2 text-red-400" />
+                        <x-input-error :messages="$errors->apply->get('idselfie')" class="mt-2 text-danger-400" />
                     </div>
                 </div>
                 <div class="row mt-3">
