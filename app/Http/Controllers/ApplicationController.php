@@ -7,7 +7,6 @@ use Hash;
 use App\Models\User;
 use App\Models\Application;
 use Illuminate\Http\Request;
-use App\Models\applicationModel;
 
 class applicationController extends Controller
 {
