@@ -19,7 +19,7 @@ class DashboardController extends Controller
             $usertype=Auth()->user()->usertype;
             if($usertype=='user'){
                 
-                return view('dashboard', compact('data'));
+                return view('dashboard');
             }
         }
 
