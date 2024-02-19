@@ -430,6 +430,195 @@
             color: #fff;
         }
 
+
+        .accordion {
+            display: flex;
+            flex-direction: column;
+            font-family: "Sora", sans-serif;
+            max-width: 991px;
+            min-width: 320px;
+            margin: 50px auto;
+           padding: 0 50px;
+        }
+        .accordion h1 {
+            font-size: 32px;
+            text-align: center;
+        }
+        .accordion-item {
+            margin-top: 16px;
+            border: 1px solid #fcfcfc;
+            border-radius: 6px;
+            background: #ffffff;
+            box-shadow: rgba(0, 0, 0, 0.05) 0px 1px 2px 0px;
+        }
+        .accordion-item .accordion-item-title {
+            position: relative;
+            margin: 0;
+            display: flex;
+            width: 100%;
+            font-size: 15px;
+            cursor: pointer;
+            justify-content: space-between;
+            flex-direction: row-reverse;
+            padding: 14px 20px;
+            box-sizing: border-box;
+            align-items: center;
+        }
+        .accordion-item .accordion-item-desc {
+            display: none;
+            font-size: 14px;
+            line-height: 22px;
+            font-weight: 300;
+            color: #444;
+            border-top: 1px dashed #ddd;
+            padding: 10px 20px 20px;
+            box-sizing: border-box;
+        }
+        .accordion-item input[type="checkbox"] {
+            position: absolute;
+            height: 0;
+            width: 0;
+            opacity: 0;
+        }
+        .accordion-item input[type="checkbox"]:checked ~ .accordion-item-desc {
+            display: block;
+        }
+        .accordion-item
+            input[type="checkbox"]:checked
+            ~ .accordion-item-title
+            .icon:after {
+            content: "-";
+            font-size: 20px;
+        }
+        .accordion-item input[type="checkbox"] ~ .accordion-item-title .icon:after {
+            content: "+";
+            font-size: 20px;
+        }
+        .accordion-item:first-child {
+            margin-top: 0;
+        }
+        .accordion-item .icon {
+            margin-left: 14px;
+        }
+
+        @media screen and (max-width: 767px) {
+            .accordion {
+                padding: 0 16px;
+            }
+            .accordion h1 {
+                font-size: 22px;
+            }
+        }
+
+        .button-apply-now {
+            width: 129px;
+            height: 40px;
+            position: relative;
+            display: inline-block;
+            text-align: center;
+            color: #fff;
+            background-color: #f0525f;
+            box-shadow: none;
+            transition: all .2s ease-in-out;
+            left: 6%;
+            top: 30px;
+
+        }
+
+        @media screen and (max-width: 801px){
+            .button-apply-now {
+                position: sticky;
+                padding: 0 16px;
+                top: 0;
+            }
+        }
+        @media screen and (max-width: 768px){
+            .button-apply-now {
+                position: sticky;
+                padding: 0 16px;
+                top: 0;
+                width: 18%;
+                font-size: 14px;
+                margin-top: 16px;
+                left: auto;
+
+
+            }
+
+            #texts {
+                font-size: 20px;
+                font-weight: bold;
+                width: 100% !important;
+
+            }
+
+            #paragraph {
+                font-size: 14px;
+            }
+        }
+
+
+        @media screen and (max-width: 1000px){
+            .agc-logo {
+                position: relative;
+                left: 30vh;
+                margin: 0;
+
+            }
+
+        }
+        @media screen and (max-width: 320px){
+            .agc-logo {
+                position: relative;
+                left: 9vh;
+                margin: 0;
+                height: 50%;
+
+            }
+
+            .button-apply-now {
+                width: 40%;
+            }
+
+            .exclusive-deals {
+                font-size: 10px;
+            }
+
+        }
+
+        @media screen and (max-width: 375px){
+            .agc-logo {
+                position: relative;
+                left: 19vh;
+                margin: 0;
+                height: 50%;
+
+            }
+
+            .button-apply-now {
+                width: 40%;
+                font-size: 9px;
+            }
+
+        }
+
+
+
+        @media screen and (max-width: 425px){
+            .agc-logo {
+                position: relative;
+                left: 14vh;
+                margin: 0;
+                height: 50%;
+
+            }
+
+            .button-apply-now {
+                width: 25%;
+                font-size: 10px;
+            }
+
+        }
         </style>
     </head>
     <body class="antialiased">

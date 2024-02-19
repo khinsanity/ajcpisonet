@@ -1,6 +1,7 @@
     <footer class="main-footer">
         <div class="footer-left">
-            <h3>AJC<span>PISONET</span></h3>
+
+        <img src="./assets/agclogo.png" alt="logohere" class="w-25 mr-2 agc-logo">
 
             <p class="footer-company-name">Copyright © 2024 <strong>AJC</strong> All rights reserved</p>
         </div>
@@ -9,16 +10,16 @@
             <div>
                 <i class="fa fa-map-marker"></i>
                 <p><span>Philippines</span>
-                Dampol 2nd B, Pulilan, 3005</p>
+                Zone 7, Punta, Carles,iloilo 5019</p>
             </div>
 
             <div>
                 <i class="fa fa-phone"></i>
-                <p>09260994769</p>
+                <p>+63 9562078140</p>
             </div>
             <div>
                 <i class="fa fa-envelope"></i>
-                <p><a href="mailto:sagar00001.co@gmail.com">AJC.pisonet2023@gmail.com</a></p>
+                <p><a href="mailto:sagar00001.co@gmail.com">AJC.pisonet2024@gmail.com</a></p>
             </div>
         </div>
         <div class="footer-right">
