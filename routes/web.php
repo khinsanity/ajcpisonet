@@ -36,7 +36,9 @@ Route::middleware(['auth', 'verified'])->group(function () {
     Route::put('clients/{id}/edit', [AllclientController::class, 'update']);
     Route::get('clients/{id}/delete', [AllclientController::class, 'deleteclient']);
 
+    // For new Application admin dashboard
     Route::get('/newapplication', [AllclientController::class, 'newapplication'])->name('newapplication');
+    Route::get('newapplication/{id}/delete', [AllclientController::class, 'deletenewapplication']);
 
 
 

@@ -66,5 +66,12 @@ class AllclientController extends Controller
         $applicants = Application::get();
         return view('include.newapplication', compact('applicants'));
     }
+    public function deletenewapplication(int $id){
+        $newapplicant = Application::findOrFail($id);
+        $newapplicant->delete();
+        return redirect()->back()->with('status', 'Application Deleted');
+    }
+
+    
 
 }
