@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Auth;
 use Hash;
+use App\Models\Allclient;
 use App\Models\Application;
 use Illuminate\Http\Request;
 
@@ -50,6 +51,18 @@ class ApplicationController extends Controller
             return redirect(route('applynow'))->with("error", "Application failed, please try again");
         }
         return redirect(route('applynow'))->with("success", "Application submitted, Please wait for email, text or call");
+    }
+
+
+    public function linkaccount(Request $request){
+        $request->validate([
+            'accountNumber' => 'required'
+        ]);
+        $data = Allclient::get();
+        if($request->accountNumber==$data->accountNumber){
+            return redirect('bill');
+        }
+
     }
 
 }
