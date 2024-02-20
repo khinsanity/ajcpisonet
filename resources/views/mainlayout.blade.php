@@ -517,12 +517,17 @@
             display: inline-block;
             text-align: center;
             color: #fff;
-            background-color: #78096D;
+            background-color: red;
             box-shadow: none;
             transition: all .2s ease-in-out;
             left: 6%;
             top: 30px;
 
+        }
+
+        .button-apply-now:hover {
+            background-color: #fff;
+            color: black;
         }
 
         @media screen and (max-width: 801px){
