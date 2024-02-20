@@ -1,10 +1,10 @@
 @extends('mainlayout')
 @section('title', 'AJC-Apply')
 @section('content')
-<div class="container-fluid">
-    <div class="row d-flex justify-content-center mt-3 mb-5">
-        <div class="row">
-            <div class="col-12 col-md-6">
+<div class="container-fluid p-0">
+    <div class="row d-flex justify-content-center">
+        <div class="row p-0 py-lg-3">
+            <div class="m-auto col-12 col-md-10 col-lg-6 my-md-2">
                 <form action="{{route('applynowPOST')}}" method="POST">
             @csrf
             <div class="col-10 m-auto p-4 border rounded shadow">
@@ -108,39 +108,61 @@
                 </div>
             </div>
         </form>
-        
             </div>
-            <div class="col-12 mt-5 m-md-0 col-md-6 h-auto plan2">
-            <div class="row">
+
+
+            <div class="col-12 col-md-12 col-lg-6  plan2">
+            <div class="row my-lg-5">
                 <div class="col col-md-2"><span></span></div>
-                <div class="col-12 col-md-4 px-2 py-5 text-center border-e-2 border-2 m-1 rounded-4 ">
-                    <a href="{{ route('20mbps') }}">
-                        <h3 class="mbps">20 Mbps</h3>
-                        <p class="p_mbps">Fiber Unli Plan 899</p>
-                    </a>
+                <div class="promo-card col-12 col-md-12 col-lg-4 text-center px-md-0 p-lg-2 m-1">
+                    <div class="card card_2 h-100">
+                        <div class="card-body text-black shadow rounded">
+                        <a href="{{ route('20mbps') }}">
+                        <h5 class="card-title fw-bold">Exclusive Offer!</h5>
+                        <h3 class="card-text fs-1 fw-bolder">20 Mbps</h3>
+                        <p class="card-text fs-3">Fiber Unli Plan 899</p>
+                        </a>
+                        </div>
+                    </div>
                 </div>
 
-                <div class="col-12 col-md-4 px-2 py-5 text-center border-2 m-1 rounded-4">
-                    <a href="{{ route('30mbps') }}">
-                        <h3 class="mbps">30 Mbps</h3>
-                        <p class="p_mbps">Fiber Unli Plan 1000</p>
-                    </a>
+                <div class="promo-card col-12 col-md-12 col-lg-4 text-center p-lg-2 px-md-0 m-1">
+                    <div class="card card_2 h-100">
+                        <div class="card-body text-black shadow rounded">
+                        <a href="{{ route('30mbps') }}">
+                        <h5 class="card-title fw-bold">Exclusive Offer!</h5>
+                        <h3 class="card-text fs-1 fw-bolder">30Mbps</h3>
+                        <p class="card-text fs-3">Fiber Unli Plan 1000</p>
+                        </a>
+                        </div>
+                    </div>
                 </div>
                 <div class="col col-md-2"><span></span></div>
             </div>
-            <div class="row">
+
+            <div class="row my-lg-5">
                 <div class="col col-md-2"><span></span></div>
-                <div class="col-12 col-md-4 px-2 py-5 text-center border-2 m-1 rounded-4">
-                    <a href="{{ route('50mbps') }}">
-                        <h3 class="mbps">50 Mbps</h3>
-                        <p class="p_mbps">Fiber Unli Plan 1300</p>
-                    </a>
+                <div class="promo-card col-12 col-md-12 col-lg-4 text-center p-lg-2 px-md-0 m-1">
+                    <div class="card card_2 h-100">
+                        <div class="card-body text-black shadow rounded">
+                        <a href="{{ route('50mbps') }}">
+                        <h5 class="card-title fw-bold">Exclusive Offer!</h5>
+                        <h3 class="card-text fs-1 fw-bolder">50Mbps</h3>
+                        <p class="card-text fs-3">Fiber Unli Plan 1300</p>
+                        </a>
+                        </div>
+                    </div>
                 </div>
-                <div class="col-12 col-md-4 px-2 py-5 text-center border-2 m-1 rounded-4">
-                    <a href="{{ route('100mbps') }}">
-                        <h3 class="mbps">100 Mbps</h3>
-                        <p class="p_mbps">Fiber Unli Plan 1500</p>
-                    </a>
+                <div class="promo-card col-12 col-md-12 col-lg-4 text-center p-lg-2 px-md-0 m-1">
+                    <div class="card card_2 h-100">
+                        <div class="card-body text-black shadow rounded">
+                        <a href="{{ route('100mbps') }}">
+                        <h5 class="card-title fw-bold">Exclusive Offer!</h5>
+                        <h3 class="card-text fs-1 fw-bolder">100Mbps</h3>
+                        <p class="card-text fs-3">Fiber Unli Plan 1500</p>
+                        </a>
+                        </div>
+                    </div>
                 </div>
                 <div class="col col-md-2"><span></span></div>
             </div>
