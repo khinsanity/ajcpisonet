@@ -59,6 +59,7 @@ class ApplicationController extends Controller
             'accountNumber' => 'required'
         ]);
         echo $request->accountNumber;
+        echo gettype($request->accountNumber);
 
     }
 
