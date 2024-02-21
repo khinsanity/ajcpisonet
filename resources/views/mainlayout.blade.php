@@ -149,7 +149,6 @@
             position: relative;
         }
         .plan2{
-            padding: 80px 0;
             background: linear-gradient(rgba(111, 78, 82, 0.259), rgba(218, 194, 178, 0.719)), url(./assets/familyinternet.jpg);
             background-position: center;
             background-size: cover;
@@ -422,6 +421,10 @@
 
         .promo-card .card {
             background-color: #fff;
+            transition: background-color 0.3s ease;
+        }
+        .promo-card .card_2 {
+            background-color: transparent;
             transition: background-color 0.3s ease;
         }
 
