@@ -58,9 +58,18 @@ class ApplicationController extends Controller
         $request->validate([
             'accountNumber' => 'required'
         ]);
-        $recvacc = (integer)$request->accountNumber;
-        echo $recvacc;
-        echo gettype($recvacc);
+
+        $searchAccountNumber = Allclient::get();
+        foreach($searchAccountNumber as $searchAccountNumber){
+            $AccountNumber = $searchAccountNumber->accountNumber;
+
+            echo $AccountNumber;
+        }
+
+
+        // $recvacc = (integer)$request->accountNumber;
+        // echo $recvacc;
+        // echo gettype($recvacc);
 
     }
 
