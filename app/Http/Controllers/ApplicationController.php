@@ -58,10 +58,7 @@ class ApplicationController extends Controller
         $request->validate([
             'accountNumber' => 'required'
         ]);
-        $data = Allclient::get();
-        if($request->accountNumber==$data->accountNumber){
-            return redirect('bill');
-        }
+        echo $request->accountNumber;
 
     }
 
