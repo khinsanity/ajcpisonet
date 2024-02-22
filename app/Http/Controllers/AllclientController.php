@@ -42,7 +42,7 @@ class AllclientController extends Controller
             'address' => 'required',
             'plan' => 'required',
             'accountNumber' => 'required|unique:allclients',
-            'user_id'=>'required',
+            'user_id'=>'required|unique:allclient',
         ]);
         Allclient::create([
             'fullname' => $request->fullname,
@@ -66,7 +66,7 @@ class AllclientController extends Controller
         return view('include.editclient', compact('client'));
     }
 
-    public function update(Request $request, int $id)
+    public function update(Request $request, int $accountNumber)
     {
         if (Auth::check()) {
             if (Auth::user()->usertype == 'user') {
@@ -81,12 +81,12 @@ class AllclientController extends Controller
             'user_id'=>'required',
 
         ]);
-        Allclient::findOrFail($id)->update([
+        Allclient::findOrFail($accountNumber)->update([
             'fullname' => $request->fullname,
             'address' => $request->address,
             'plan' => $request->plan,
-            'accountNumber' => 'required|unique:allclients',
-            'user_id'=>'required',
+            'accountNumber' => $request-> accountNumber,
+            'user_id'=> $request->user_id,
 
         ]);
         return redirect()->back()->with('status', 'Client Updated');
