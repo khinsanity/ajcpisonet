@@ -40,10 +40,6 @@
             <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
                 <div class="p-6 text-gray-900">
 
-                    {{-- @foreach ( as )
-
-                    @endforeach --}}
-
                         <h1>This is user account dashboard</h1>
 
                 </div>
