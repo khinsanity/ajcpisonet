@@ -12,14 +12,14 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('allclients', function (Blueprint $table) {
-            $table->id('id');
-            $table->unsignedInteger('user_id');
+            // $table->id('id');
+            $table->unsignedInteger('id');
             $table->string('fullname');
             $table->string('address');
             $table->string('plan');
-            $table->integer('accountNumber');
+            $table->id('accountNumber');
             $table->timestamps();
-            $table->foreign('user_id')
+            $table->foreign('id')
                     ->references('id')
                     ->on('applications')
                     ->onDelete('cascade');

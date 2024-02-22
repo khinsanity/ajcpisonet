@@ -11,7 +11,7 @@ class Allclient extends Model
 
     protected $table = 'allclients';
 
-    protected $primaryKey = 'id';
+    // protected $primaryKey = 'id';
 
     protected $fillable = [
         'fullname',
