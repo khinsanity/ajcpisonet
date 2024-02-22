@@ -38,18 +38,20 @@ class AllclientController extends Controller
             }
         }
         $request->validate([
+            'id'=> 'required|unique:allclients',
             'fullname' => 'required|unique:allclients',
             'address' => 'required',
             'plan' => 'required',
             'accountNumber' => 'required|unique:allclients',
-            'user_id'=>'required|unique:allclient',
+
         ]);
         Allclient::create([
+            'id'=> $request->id,
             'fullname' => $request->fullname,
             'address' => $request->address,
             'plan' => $request->plan,
             'accountNumber' => $request->accountNumber,
-            'user_id'=> $request->user_id,
+
         ]);
         return redirect('createclient')->with('status', 'Client Added');
 
@@ -66,7 +68,7 @@ class AllclientController extends Controller
         return view('include.editclient', compact('client'));
     }
 
-    public function update(Request $request, int $accountNumber)
+    public function update(Request $request, int $id)
     {
         if (Auth::check()) {
             if (Auth::user()->usertype == 'user') {
@@ -74,19 +76,21 @@ class AllclientController extends Controller
             }
         }
         $request->validate([
+            'id'=>'nullable',
             'fullname' => 'required|unique:allclients',
             'address' => 'required',
             'plan' => 'required',
-            'accountNumber' => 'required|unique:allclients',
-            'user_id'=>'required',
+            'accountNumber' => 'required',
+
 
         ]);
-        Allclient::findOrFail($accountNumber)->update([
+        Allclient::findOrFail($id)->update([
+            'id'=> $request->id,
             'fullname' => $request->fullname,
             'address' => $request->address,
             'plan' => $request->plan,
             'accountNumber' => $request-> accountNumber,
-            'user_id'=> $request->user_id,
+
 
         ]);
         return redirect()->back()->with('status', 'Client Updated');
