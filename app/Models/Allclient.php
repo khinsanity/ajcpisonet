@@ -20,4 +20,10 @@ class Allclient extends Model
         'plan',
         'accountNumber',
     ];
+
+    public function user(){
+        return $this->hasOne(User::class);
+    }
+
+
 }
