@@ -47,4 +47,5 @@ class User extends Authenticatable implements MustVerifyEmail
             get: fn ($value) =>  ["user", "admin", "manager"][$value],
         );
     }
+    
 }
