@@ -11,13 +11,19 @@ class Allclient extends Model
 
     protected $table = 'allclients';
 
-    protected $primaryKey = 'id';
+    // protected $primaryKey = 'id';
 
     protected $fillable = [
+        'id',
         'fullname',
         'address',
         'plan',
-        'user_id',
-        'accountNumber'
+        'accountNumber',
     ];
+
+    public function user(){
+        return $this->hasOne(User::class);
+    }
+
+
 }

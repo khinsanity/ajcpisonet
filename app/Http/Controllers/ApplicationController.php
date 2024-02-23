@@ -69,7 +69,7 @@ class ApplicationController extends Controller
         // foreach($searchAccountNumber as $searchAccountNumber){
 
         //     $recvAccountNumber = (integer)$request->accountNumber; // converting user input into integer
-            
+
         //     $AccountNumber = $searchAccountNumber->accountNumber; // data from allclient table specific accountNumber Column
         //     if($recvAccountNumber == $AccountNumber){
         //         //proceed
@@ -84,7 +84,7 @@ class ApplicationController extends Controller
         // }
 
 
-        
+
 
     }
 

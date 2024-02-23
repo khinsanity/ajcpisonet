@@ -38,8 +38,8 @@
                             </div>
                             <div class="mb-3">
                                 <label>User_ID</label>
-                                <input type="text" class="form-control" name="user_id" value="{{old('user_id')}}" />
-                                @error('user_id') <span class="text-danger">{{$message}}</span>@enderror
+                                <input type="text" class="form-control" name="id" value="{{old('id')}}" />
+                                @error('id') <span class="text-danger">{{$message}}</span>@enderror
                             </div>
                             <div class="mb-3">
                                 <label>Account Number</label>

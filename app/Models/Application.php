@@ -29,4 +29,8 @@ class Application extends Model
         'uploadid',
         'idselfie'
     ];
+
+    public function allClients(){
+        return $this->hasOne(Allclient::class);
+    }
 }
