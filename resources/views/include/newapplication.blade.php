@@ -16,7 +16,7 @@
                             </h4>
                         </div>
                         <div class="card-body">
-                            <div class="table-responsive-sm">
+                            <div class="table-responsive">
                                 <table class="table table-bordered">
                                     <thead>
                                         <tr class="text-nowrap">

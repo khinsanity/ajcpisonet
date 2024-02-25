@@ -44,7 +44,7 @@ Route::middleware(['auth', 'verified'])->group(function () {
     Route::get('newapplication/{id}/delete', [AllclientController::class, 'deletenewapplication']);
 
 
-
+    Route::get('/user/{id}/dashboard', [DashboardController::class, 'userdashboard'])->name('userdashboard')->where('id','[0-9]+');
 });
 
 
