@@ -65,7 +65,7 @@ class ApplicationController extends Controller
             }
         }
         $account = Allclient::findOrFail($id);
-        return view('dashboard', ['account'=> $account]);
+        return view('dashboard', compact('account'));
     }
 
     public function linkaccount(Request $request, int $id)
