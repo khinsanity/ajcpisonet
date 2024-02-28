@@ -72,7 +72,7 @@ class ApplicationController extends Controller
     }
 
     public function approveclient(int $id){
-        echo $id;
+        echo $email;
     }
 
 }
