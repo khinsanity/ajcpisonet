@@ -38,7 +38,7 @@
                     </x-nav-link>
                 </div>
                 <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">
-                    @if(Auth::user()->accountNumber > 0)
+                    @if(Auth::user()->accountNumber != NULL)
                     <x-nav-link :href="route('bill')" :active="request()->routeIs('bill')">
                         {{ __('Bill') }}
                     </x-nav-link>
