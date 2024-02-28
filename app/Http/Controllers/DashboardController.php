@@ -32,7 +32,7 @@ class DashboardController extends Controller
                 //proceed
                 $user['accountnumber'] = $recvAccountNumber;
                 $user['name'] = Auth::user()->name;
-                
+                $user['email'] = Auth::user()->email;
                 Auth::user()->insert($user);
          
             
