@@ -39,11 +39,10 @@ class DashboardController extends Controller
                 $ConfirmLink = Auth::user()->update($user);
                     if($ConfirmLink){
                         return redirect('dashboard');
-                    }
-            }else{
-                return view('dashboard')->with('status', 'Invalid account number!');
-
-        }
+                    }else{
+                        return redirect()->back()->with('status', 'Invalid account number!');
+                }
+            }
 
     }
 
