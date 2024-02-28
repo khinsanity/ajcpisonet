@@ -58,6 +58,7 @@
                                                 <td>
                                                     <a href="{{route('approveclient', 
                                                             [
+                                                                $applicants->id,
                                                                 $applicants->firstname,
                                                                 $applicants->lastname,
                                                                 $applicants->email,
