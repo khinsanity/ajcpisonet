@@ -36,9 +36,10 @@ class DashboardController extends Controller
                 $user['usertype'] = Auth::user()->usertype;
                 $user['email_verified_at'] = Auth::user()->email_verified_at;
                 $user['accountnumber'] = $recvAccountNumber;
-                
-                
-                Auth::user()->update($user);
+                $ConfirmLink = Auth::user()->update($user);
+                    if($ConfirmLink){
+                        return view('dashboard');
+                    }
          
             
 
