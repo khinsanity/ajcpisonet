@@ -23,7 +23,7 @@
                             <label>Enter your account number:</label>
                             <input type="text" name="accountnumber" class="form-control" required />
                             <x-auth-session-status class="mb-4 text-danger" :status="session('status')" />
-                            @error('accountnumber') <span class="text-danger">{{$message}}</span>@enderror
+                            @error('accountnumber') <span class="text-danger font-medium text-sm">{{$message}}</span>@enderror
                         </div>
                         <div class="mb-3">
                             <button type="submit" class="btn btn-primary">Link Now</button>
