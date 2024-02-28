@@ -17,7 +17,7 @@ return new class extends Migration
             $table->string('fullname');
             $table->string('address');
             $table->string('plan');
-            $table->string('accountNumber');
+            $table->unsignedBigInteger('accountNumber');
             $table->timestamps();
             // $table->foreign('id')
             //         ->references('id')
