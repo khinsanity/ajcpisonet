@@ -21,9 +21,12 @@ class DashboardController extends Controller
     }
 
     public function linkaccount (Request $request) {
+        $request->validate([
+            'accountnumber'=> 'required'
+        ]);
         $searchAccountNumber = Allclient::get();
         foreach($searchAccountNumber as $searchAccountNumber){
-            $recvAccountNumber = $request->accountNumber; // user input
+            $recvAccountNumber = $request->accountnumber; // user input
             $AccountNumber = $searchAccountNumber->accountNumber; // data from allclient table specific accountNumber Column
             // if($recvAccountNumber == $AccountNumber){
             //     //proceed
