@@ -30,7 +30,8 @@ class DashboardController extends Controller
             $AccountNumber = $searchAccountNumber->accountNumber; // data from allclient table specific accountNumber Column
             if($recvAccountNumber == $AccountNumber){
                 //proceed
-               Auth::user()->accountnumber->update(['accountnumber' => $recvAccountNumber]);
+            Auth::user()->accountnumber->update($recvAccountNumber) ;
+            
 
             }else{
                 echo 'not okay';
