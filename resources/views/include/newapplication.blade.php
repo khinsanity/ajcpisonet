@@ -17,7 +17,7 @@
                         </div>
                         <div class="card-body">
                             <div class="table-responsive">
-                                {{$applicants}}
+                     
                                 <table class="table table-bordered">
                                     <thead>
                                         <tr class="text-nowrap">
