@@ -47,7 +47,7 @@ class AllclientController extends Controller
             'accountNumber' => 'required|unique:allclients',
 
         ]);
-        Allclient::create([
+        $AddClient = Allclient::create([
             'id'=> $request->id,
             'fullname' => $request->fullname,
             'address' => $request->address,
@@ -55,6 +55,9 @@ class AllclientController extends Controller
             'accountNumber' => $request->accountNumber,
 
         ]);
+        if(!$AddClient){
+            return redirect('createclient')->with('status', 'Error');
+        }
         return redirect('createclient')->with('status', 'Client Added');
 
     }
