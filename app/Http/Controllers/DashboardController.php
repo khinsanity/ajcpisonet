@@ -33,6 +33,7 @@ class DashboardController extends Controller
             echo Auth::user()->id;
             echo Auth::user()->name;
             echo Auth::user()->email;
+            echo Auth::user()->accountnumber;
          
             
 
