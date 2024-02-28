@@ -31,7 +31,7 @@ class DashboardController extends Controller
             if($recvAccountNumber == $AccountNumber){
                 //proceed
                 $user['accountnumber'] = $recvAccountNumber;
-                DB::table('users')->insert($user);
+                Auth::user()->insert($user);
          
             
 
