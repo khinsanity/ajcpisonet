@@ -30,18 +30,16 @@ class DashboardController extends Controller
             $AccountNumber = $searchAccountNumber->accountNumber; // data from allclient table specific accountNumber Column
             if($recvAccountNumber == $AccountNumber){
                 //proceed
-                $user['name'] = Auth::user()->name;
-                $user['email'] = Auth::user()->email;
-                $user['password'] = Auth::user()->password;
-                $user['usertype'] = Auth::user()->usertype;
-                $user['email_verified_at'] = Auth::user()->email_verified_at;
-                $user['accountnumber'] = $recvAccountNumber;
+                $user['name'] = Auth::user()->name; // giving default value from user
+                $user['email'] = Auth::user()->email; // giving default value from user
+                $user['password'] = Auth::user()->password; // giving default value from user
+                $user['usertype'] = Auth::user()->usertype; // giving default value from user
+                $user['email_verified_at'] = Auth::user()->email_verified_at; // giving default value from user
+                $user['accountnumber'] = $recvAccountNumber; // This is from user input to link account
                 $ConfirmLink = Auth::user()->update($user);
                     if($ConfirmLink){
                         return redirect('dashboard');
                     }
-         
-            
 
             }else{
                 echo 'not okay';
