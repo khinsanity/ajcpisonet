@@ -25,12 +25,13 @@ class DashboardController extends Controller
         foreach($searchAccountNumber as $searchAccountNumber){
             $recvAccountNumber = $request->accountNumber; // user input
             $AccountNumber = $searchAccountNumber->accountNumber; // data from allclient table specific accountNumber Column
-            if($recvAccountNumber == $AccountNumber){
-                //proceed
-                echo 'ok';
-            }else{
-                echo 'not ok';
-            }
+            // if($recvAccountNumber == $AccountNumber){
+            //     //proceed
+            //     echo 'ok';
+            // }else{
+            //     echo 'not ok';
+            // }
+            echo gettype($recvAccountNumber);
 
         }
 
