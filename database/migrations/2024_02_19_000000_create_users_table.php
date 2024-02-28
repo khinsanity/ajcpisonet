@@ -21,10 +21,7 @@ return new class extends Migration
             $table->string('accountnumber')->nullable();
             $table->rememberToken();
             $table->timestamps();
-            // $table->foreign('accountNumber')
-            //     ->references('accountNumber')
-            //     ->on('allclients')
-            //     ->onDelete('cascade');
+            $table->foreign('accountnumber')->references('accountNumber')->on('allclients')->onDelete('cascade');
         });
     }
 
