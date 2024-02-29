@@ -78,7 +78,9 @@ class ApplicationController extends Controller
             'plan' => $plan,
             'accountNumber' => 0
         ]);
-        // return redirect('newapplication');
+        $newapplicant = Application::findOrFail($id);
+        $newapplicant->delete();
+        return redirect('admindashboard');
     }
 
 }

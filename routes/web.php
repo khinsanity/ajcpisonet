@@ -50,7 +50,7 @@ Route::middleware(['auth', 'verified'])->group(function () {
 
     Route::post('/link',[DashboardController::class, 'linkaccount'])->name('linkaccount');
 
-
+    // For Approve client auto add and auto delete from new application
     Route::get('/approveclient/{id}/{firstname}/{lastname}/{email}/{contact}/{birthday}/{gender}/{plan}/{street}/{barangay}/{town}/{province}', [ApplicationController::class, 'approveclient'])->name('approveclient');
 
 
