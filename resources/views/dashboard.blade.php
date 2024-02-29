@@ -41,6 +41,7 @@
                 <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
                     <div class="p-6 text-gray-900 align-items-end">
                         <h1>Linked</h1>
+                        {{Auth::user()->id}}
                     </div>
                 </div>
             </div>
