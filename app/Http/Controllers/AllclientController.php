@@ -59,10 +59,10 @@ class AllclientController extends Controller
 
     }
 
-    public function edit(int $id)
+    public function modi($id)
     {
         if (Auth::check()) {
-            if (Auth::user()->usertype == 'user') {
+            if (Auth::user()->usertype != 'admin') {
                 return redirect(route('dashboard'));
             }
         }
