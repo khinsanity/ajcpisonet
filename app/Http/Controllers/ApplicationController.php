@@ -71,6 +71,7 @@ class ApplicationController extends Controller
         return redirect(route('applynow'))->with("success", "Application submitted, Please wait for email, text or call");
     }
 
+    //For Approve and auto add auto delete
     public function approveclient($id,$firstname, $lastname, $email, $contact, $birthday, $gender, $plan, $street, $barangay, $town, $province){
         Allclient::create([
             'fullname' => $firstname .' '. $lastname,
