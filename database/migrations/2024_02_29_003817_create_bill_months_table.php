@@ -14,7 +14,7 @@ return new class extends Migration
         Schema::create('bill_months', function (Blueprint $table) {
             $table->id();
             $table->unsignedBigInteger('accountnumber');
-            $table->foreign('accountnumber')->references('id')->on('users');
+            $table->foreign('accountnumber')->references('id')->on('users')->onDelete('cascade');
             $table->string('March');
             $table->timestamps();
         });
