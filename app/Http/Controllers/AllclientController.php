@@ -67,7 +67,7 @@ class AllclientController extends Controller
             }
         }
         $client = Allclient::findOrFail($id);
-        return view('include.editclient', compact('client'));
+        return view('include.modifyclient', compact('client'));
     }
 
     public function update(Request $request, int $id)
