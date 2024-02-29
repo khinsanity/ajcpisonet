@@ -75,7 +75,8 @@ class ApplicationController extends Controller
         Allclient::create([
             'fullname' => $firstname . $lastname,
             'address' => $street . $barangay . $town . $province,
-            'plan' => $plan
+            'plan' => $plan,
+            'accountNumber' => NULL
         ]);
         // return redirect('newapplication');
     }
