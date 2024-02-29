@@ -73,7 +73,7 @@ class ApplicationController extends Controller
 
     public function approveclient($id,$firstname, $lastname, $email, $contact, $birthday, $gender, $plan, $street, $barangay, $town, $province){
         Allclient::create([
-            'fullname' => $firstname . $lastname,
+            'fullname' => $firstname .' '. $lastname,
             'address' => $street . $barangay . $town . $province,
             'plan' => $plan,
             'accountNumber' => 0
