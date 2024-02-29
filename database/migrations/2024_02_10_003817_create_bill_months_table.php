@@ -12,8 +12,9 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('bill_months', function (Blueprint $table) {
-            $table->unsignedBigInteger('id')->nullable();
+            $table->id();
             $table->string('March');
+            $table->foreign('id')->references('id')->on('users');
             $table->timestamps();
         });
     }
