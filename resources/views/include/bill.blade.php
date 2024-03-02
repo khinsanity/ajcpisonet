@@ -27,7 +27,7 @@
                                         <th>Plan</th>
                                         <th>March</th>
                                         <th>April</th>
-                                        <th>{{$demo=date('m');echo $demo}}</th>
+                                        <th>{{echo new Date()}}</th>
                                     </tr>
                                 </thead>
                                 <tbody>
