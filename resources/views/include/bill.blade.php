@@ -22,7 +22,7 @@
                             <table class="table table-bordered table-striped table-sm text-center">
                                 <thead class="table-dark">
                                     <tr>
-                                        <th>CLIENT_ID</th>
+                                        <th>Client ID</th>
                                         <th>Fullname</th>
                                         <th>Plan</th>
                                         <th>March</th>
