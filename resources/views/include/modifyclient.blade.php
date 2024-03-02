@@ -24,17 +24,17 @@
                             @method('PUT')
                             <div class="mb-3">
                                 <label>Fullname</label>
-                                <input type="text" class="form-control capitalize" name="fullname" value="{{$client->fullname}}"  />
+                                <input type="text" class="form-control" name="fullname" value="{{$client->fullname}}" style="text-transform: capitalize" />
                                 @error('fullname') <span class="text-danger">{{$message}}</span>@enderror
                             </div>
                             <div class="mb-3">
                                 <label>Address</label>
-                                <input type="text" class="form-control capitalize" name="address" value="{{$client->address}}"  />
+                                <input type="text" class="form-control" name="address" value="{{$client->address}}" style="text-transform: capitalize" />
                                 @error('address') <span class="text-danger">{{$message}}</span>@enderror
                             </div>
                             <div class="mb-3">
                                 <label>Plan</label>
-                                <input type="text" class="form-control capitalize" name="plan" value="{{$client->plan}}"  />
+                                <input type="text" class="form-control" name="plan" value="{{$client->plan}}" style="text-transform: capitalize" />
                                 @error('address') <span class="text-danger">{{$message}}</span>@enderror
                             </div>
                             <div class="mb-3">
