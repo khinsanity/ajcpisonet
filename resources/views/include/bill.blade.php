@@ -31,6 +31,12 @@
                                         @if(date('m')>=2)
                                             <th>Feb</th>
                                         @endif
+                                        @if(date('m')>=3)
+                                            <th>Mar</th>
+                                        @endif
+                                        @if(date('m')>=4)
+                                            <th>Apr</th>
+                                        @endif
                                     </tr>
                                 </thead>
                                 <tbody>
