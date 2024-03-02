@@ -27,7 +27,7 @@
                                         <th>Plan</th>
                                         <th>March</th>
                                         <th>April</th>
-                                        <th>{{date('Y')}}</th>
+                                        <th>{{date('M')}}</th>
                                     </tr>
                                 </thead>
                                 <tbody>
