@@ -80,7 +80,12 @@
                                     <tr>
                                         <td>{{$billdata->plan}}</td>
                                         @if(date('m')>=1)
-                                            <td>{{$billdata->january}}</td>
+                                            <td>@if($billdata->january === 0)
+                                                    Paid
+                                                @else 
+                                                    {{$billdata->january}}
+                                                @endif
+                                            </td>
                                         @endif
                                         @if(date('m')>=2)
                                             <td>{{$billdata->febuary}}</td>
