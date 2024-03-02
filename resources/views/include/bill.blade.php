@@ -27,7 +27,6 @@
                                         <th>Plan</th>
                                         <th>March</th>
                                         <th>April</th>
-                                        <th>Edit</th>
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -37,9 +36,6 @@
                                         <td>{{$billdata->plan}}</td>
                                         <td>{{$billdata->march}}</td>
                                         <td>{{$billdata->april}}</td>
-                                        <td>
-                                            
-                                        </td>
                                     </tr>
                                     
                                                 
