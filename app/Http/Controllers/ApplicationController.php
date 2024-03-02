@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Bill;
 use App\Models\User;
 use App\Models\Allclient;
 use App\Models\Application;
@@ -78,6 +79,10 @@ class ApplicationController extends Controller
             'address' => $street .' '. $barangay .' '. $town .' '. $province,
             'plan' => $plan,
             'accountNumber' => 0
+        ]);
+        Bill::create([
+            'client_id' => $id,
+            'fullname' => $firstname .' '. $lastname,
         ]);
         $newapplicant = Application::findOrFail($id);
         $newapplicant->delete();
