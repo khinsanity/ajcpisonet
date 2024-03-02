@@ -77,6 +77,7 @@ class ApplicationController extends Controller
         Allclient::create([
             'fullname' => $firstname .' '. $lastname,
             'address' => $street .' '. $barangay .' '. $town .' '. $province,
+            'plan' => $plan,
             'accountNumber' => 0
         ]);
         Bill::create([
