@@ -27,13 +27,11 @@
                                         <th>Plan</th>
                                         <th>March</th>
                                         <th>April</th>
-                                        @if({{date('m')}} == 3)
-                                            <th>
-                                            
-                                                Ok
-                                            
+                                        <th>
+                                            {{if(date('m') == 3){
+                                                echo "OK";
+                                            }}}
                                         </th>
-                                        @endif
                                     </tr>
                                 </thead>
                                 <tbody>
