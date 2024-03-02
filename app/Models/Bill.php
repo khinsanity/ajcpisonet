@@ -14,7 +14,7 @@ class Bill extends Model
 
     protected $fillable = [
         'client_id',
-        'March',
+        'fullname',
         
     ];
 }
