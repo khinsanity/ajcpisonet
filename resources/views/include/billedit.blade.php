@@ -19,7 +19,13 @@
                         </h4>
                     </div>
                     <div class="card-body">
-                        <form action="{{url('clients/'.$BillEdit->client_id.'/billupdate')}}" method="POST">
+                        <form action="{{route('billupdate',[
+                                        $BillEdit->client_id,
+                                        $BillEdit->fullname,
+                                        $BillEdit->accountnumber,
+                                        $BillEdit->plan
+                                            ])}}" 
+                            method="POST">
                             @csrf
                             @method('PUT')
                             <div class="mb-3">
