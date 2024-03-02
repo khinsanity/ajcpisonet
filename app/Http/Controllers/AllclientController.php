@@ -118,8 +118,10 @@ class AllclientController extends Controller
         return view ('include.bill', compact('billdata'));
     }
     //Bill Edit
-    public function billedit(){
-        return view('include.billedit');
+    public function billedit($client_id){
+        
+        $BillEdit = Bill::findOrFail($client_id);
+        return view('include.billedit',compact('BillEdit'));
     }
 
 }
