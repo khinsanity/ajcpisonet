@@ -28,10 +28,8 @@
                                         <th>March</th>
                                         <th>April</th>
                                         <th>
-                                            @if({{date('m')}} == 1)
-                                                OK
-                                            @else
-                                                haha
+                                            @if({{date('m')}} == 3)
+                                                Ok
                                             @endif
                                         </th>
                                     </tr>
