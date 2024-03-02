@@ -26,9 +26,9 @@
                                         <th>Fullname</th>
                                         <th>Plan</th>
                                         @if(date('m')>=1 && date('m') <= 4)
-                                            OK 
+                                        <th>January</th>
                                         @else
-                                            indi
+                                        <th>Dec</th>
                                         @endif
                                     </tr>
                                 </thead>
