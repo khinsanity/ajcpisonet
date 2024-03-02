@@ -90,37 +90,92 @@
                                             </td>
                                         @endif
                                         @if(date('m')>=2)
-                                            <td>{{$billdata->febuary}}</td>
+                                            <td>@if($billdata->febuary === 0)
+                                                Paid
+                                            @else 
+                                                {{$billdata->febuary}}
+                                            @endif
+                                            </td>
                                         @endif
                                         @if(date('m')>=3)
-                                            <td>{{$billdata->march}}</td>
+                                            <td>@if($billdata->march === 0)
+                                                Paid
+                                            @else 
+                                                {{$billdata->march}}
+                                            @endif
+                                            </td>
                                         @endif
                                         @if(date('m')>=4)
-                                            <td>{{$billdata->april}}</td>
+                                            <td>@if($billdata->april === 0)
+                                                Paid
+                                            @else 
+                                                {{$billdata->april}}
+                                            @endif
+                                            </td>
                                         @endif
                                         @if(date('m')>=5)
-                                            <td>{{$billdata->may}}</td>
+                                            <td>@if($billdata->may === 0)
+                                                Paid
+                                            @else 
+                                                {{$billdata->may}}
+                                            @endif
+                                            </td>
                                         @endif
                                         @if(date('m')>=6)
-                                            <td>{{$billdata->june}}</td>
+                                            <td>@if($billdata->june === 0)
+                                                Paid
+                                            @else 
+                                                {{$billdata->june}}
+                                            @endif
+                                            </td>
                                         @endif
                                         @if(date('m')>=7)
-                                            <td>{{$billdata->july}}</td>
+                                            <td>@if($billdata->july === 0)
+                                                Paid
+                                            @else 
+                                                {{$billdata->july}}
+                                            @endif
+                                            </td>
                                         @endif
                                         @if(date('m')>=8)
-                                            <td>{{$billdata->august}}</td>
+                                            <td>@if($billdata->august === 0)
+                                                Paid
+                                            @else 
+                                                {{$billdata->august}}
+                                            @endif
+                                            </td>
                                         @endif
                                         @if(date('m')>=9)
-                                            <td>{{$billdata->september}}</td>
+                                            <td>@if($billdata->september === 0)
+                                                Paid
+                                            @else 
+                                                {{$billdata->september}}
+                                            @endif
+                                            </td>
                                         @endif
                                         @if(date('m')>=10)
-                                            <td>{{$billdata->october}}</td>
+                                            <td>@if($billdata->october === 0)
+                                                Paid
+                                            @else 
+                                                {{$billdata->october}}
+                                            @endif
+                                            </td>
                                         @endif
                                         @if(date('m')>=11)
-                                            <td>{{$billdata->november}}</td>
+                                            <td>@if($billdata->november === 0)
+                                                Paid
+                                            @else 
+                                                {{$billdata->november}}
+                                            @endif
+                                            </td>
                                         @endif
                                         @if(date('m')>=12)
-                                            <td>{{$billdata->december}}</td>
+                                            <td>@if($billdata->december === 0)
+                                                Paid
+                                            @else 
+                                                {{$billdata->december}}
+                                            @endif
+                                            </td>
                                         @endif
 
                                     </tr>
