@@ -28,9 +28,9 @@
                                         <th>March</th>
                                         <th>April</th>
                                         <th>
-                                            {{if(date('m') == 3){
-                                                echo "OK";
-                                            }}}
+                                            @if (date('m') >= 03)
+                                                OK
+                                            @endif
                                         </th>
                                     </tr>
                                 </thead>
