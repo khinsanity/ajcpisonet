@@ -15,6 +15,7 @@ class Bill extends Model
     protected $fillable = [
         'client_id',
         'fullname',
+        'plan',
         'march',
         'april',
         

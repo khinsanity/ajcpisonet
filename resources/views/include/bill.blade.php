@@ -22,6 +22,7 @@
                                     <tr>
                                         <th>CLIENT_ID</th>
                                         <th>Fullname</th>
+                                        <th>Plan</th>
                                         <th>March</th>
                                         <th>April</th>
                                         <th>Edit</th>
@@ -31,6 +32,7 @@
                                     <tr>
                                         <td>{{$billdata->client_id}}</td>
                                         <td>{{$billdata->fullname}}</td>
+                                        <td>{{$billdata->plan}}</td>
                                         <td>{{$billdata->march}}</td>
                                         <td>{{$billdata->april}}</td>
                                         <td>

@@ -23,7 +23,6 @@
                                         <th>ID</th>
                                         <th>Fullname</th>
                                         <th>Address</th>
-                                        <th>Plan</th>
                                         <th>Account#</th>
                                         <th>Bill</th>
                                         <th>Edit</th>
@@ -36,7 +35,6 @@
                                             <td>{{$item->id}}</td>
                                             <td>{{$item->fullname}}</td>
                                             <td>{{$item->address}}</td>
-                                            <td>{{$item->plan}}</td>
                                             <td>{{$item->accountNumber}}</td>
                                             <td>
                                                 <a href="{{url('clients/'.$item->id.'/bill')}}" class="btn btn-danger delete mx-1">
@@ -48,7 +46,6 @@
                                                     $item->id,
                                                     $item->fullname,
                                                     $item->address,
-                                                    $item->plan,
                                                     $item->accountNumber,
                                                     ])}}" 
                                                 class="btn btn-success edit mx-1">

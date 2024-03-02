@@ -77,12 +77,12 @@ class ApplicationController extends Controller
         Allclient::create([
             'fullname' => $firstname .' '. $lastname,
             'address' => $street .' '. $barangay .' '. $town .' '. $province,
-            'plan' => $plan,
             'accountNumber' => 0
         ]);
         Bill::create([
             'client_id' => $id,
-            'fullname' => $firstname .' '. $lastname
+            'fullname' => $firstname .' '. $lastname,
+            'plan' => $plan
         ]);
         $newapplicant = Application::findOrFail($id);
         $newapplicant->delete();
