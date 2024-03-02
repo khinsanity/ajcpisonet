@@ -149,4 +149,9 @@ class AllclientController extends Controller
 
     }
 
+    //Bill page admin side
+    public function bill(){
+        return view ('include.bill');
+    }
+
 }

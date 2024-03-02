@@ -60,6 +60,10 @@ Route::middleware(['auth', 'verified'])->group(function () {
     Route::get('/approveclient/{id}/{firstname}/{lastname}/{email}/{contact}/{birthday}/{gender}/{plan}/{street}/{barangay}/{town}/{province}', [ApplicationController::class, 'approveclient'])->name('approveclient');
 
 
+    //For Bill admin side
+    Route::put('clients/{id}/bill', [AllclientController::class, 'bill']);
+
+
 });
 
 
