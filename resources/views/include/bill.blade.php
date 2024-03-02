@@ -28,7 +28,7 @@
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    {{billdata->id}}
+                                    {{$billdata->id}}
                                     {{-- @foreach ($billdata as $billdata)
                                         <tr class="text-nowrap">
                                             <td>{{$billdata->id}}</td>
