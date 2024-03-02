@@ -61,7 +61,7 @@ Route::middleware(['auth', 'verified'])->group(function () {
 
 
     //For Bill admin side
-    Route::put('clients/{id}/bill', [AllclientController::class, 'bill']);
+    Route::get('clients/{id}/bill', [AllclientController::class, 'bill']);
 
 
 });
