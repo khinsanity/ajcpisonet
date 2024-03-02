@@ -24,6 +24,7 @@
                                         <th>Fullname</th>
                                         <th>March</th>
                                         <th>April</th>
+                                        <th>Edit</th>
                                     </tr>
                                 </thead>
                                 <tbody>
