@@ -19,22 +19,22 @@
                         </h4>
                     </div>
                     <div class="card-body">
-                        <form action="{{url('clients/'.$client->id.'')}}" method="POST">
+                        <form action="{{url('clients/'.$client->id)}}" method="POST">
                             @csrf
                             @method('PUT')
                             <div class="mb-3">
                                 <label>Fullname</label>
-                                <input type="text" class="form-control uppercase" name="fullname" value="{{$client->fullname}}"  />
+                                <input type="text" class="form-control capitalize" name="fullname" value="{{$client->fullname}}"  />
                                 @error('fullname') <span class="text-danger">{{$message}}</span>@enderror
                             </div>
                             <div class="mb-3">
                                 <label>Address</label>
-                                <input type="text" class="form-control uppercase" name="address" value="{{$client->address}}"  />
+                                <input type="text" class="form-control capitalize" name="address" value="{{$client->address}}"  />
                                 @error('address') <span class="text-danger">{{$message}}</span>@enderror
                             </div>
                             <div class="mb-3">
                                 <label>Plan</label>
-                                <input type="text" class="form-control uppercase" name="plan" value="{{$client->plan}}"  />
+                                <input type="text" class="form-control capitalize" name="plan" value="{{$client->plan}}"  />
                                 @error('address') <span class="text-danger">{{$message}}</span>@enderror
                             </div>
                             <div class="mb-3">
