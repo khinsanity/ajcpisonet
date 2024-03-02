@@ -39,7 +39,7 @@
                                             <td>{{$item->plan}}</td>
                                             <td>{{$item->accountNumber}}</td>
                                             <td>
-                                                <a href="{{url('clients/'.$item->id.'/bill')}}" class="btn btn-danger delete mx-1" onclick="return confirm('Are you sure?')">
+                                                <a href="{{url('clients/'.$item->id.'/bill')}}" class="btn btn-danger delete mx-1">
                                                     Bill
                                                 </a>
                                             </td>
