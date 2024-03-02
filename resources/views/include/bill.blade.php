@@ -30,7 +30,7 @@
                                 </svg>
                             </a>
                         </h4>
-                        <h3>Account # : {{$billdata->accountnumber}}</h3>
+                        <h6>Account # : {{$billdata->accountnumber}}</h6>
                     </div>
                     <div class="card-body">
                         <div class="table-responsive">
