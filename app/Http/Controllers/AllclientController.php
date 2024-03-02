@@ -121,7 +121,27 @@ class AllclientController extends Controller
     public function billedit($client_id){
         
         $BillEdit = Bill::findOrFail($client_id);
-        return view('include.billedit',compact('BillEdit'));
+        return view('include.billedit',compact('BillEdit')); 
+    }
+
+    //For Bill Update
+    public function billupdate(Request $request, int $client_id)
+    {
+        $request->validate([
+            'january' => 'required',
+            'febuary' => 'required',
+            'march' => 'required',
+        ]);
+        Bill::findOrFail($client_id)->update([
+            'client_id' => $client_id,
+            'fullname' => $fullname,
+            'accountnumber' => $accountnumber,
+            'plan' => $plan,
+            'january' => $request->january,
+            'febuary' => $request->febuary,
+            'march' => $request->march
+        ]);
+        return redirect()->back()->with('status', 'Bill Updated');
     }
 
 }
