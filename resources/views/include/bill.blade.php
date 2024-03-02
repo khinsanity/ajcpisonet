@@ -31,7 +31,7 @@
                                     @foreach ($billdata as $billdata)
                                         <tr class="text-nowrap">
                                             <td>{{$billdata->client_id}}</td>
-                                            <td>{{$billdata->client_fullname}}</td>
+                                            <td>{{$billdata->fullname}}</td>
                                             <td>{{$billdata->march}}</td>
                                             <td>{{$billdata->april}}</td>
                                             <td>
