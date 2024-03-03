@@ -16,7 +16,7 @@ class MyMailingServices extends Mailable
     /**
      * Create a new message instance.
      */
-    public function __construct(private $fullname, $accountnumber, $email)
+    public function __construct(public Bill $bill)
     {
         //
     }
@@ -38,7 +38,7 @@ class MyMailingServices extends Mailable
     {
         return new Content(
             view:('mail'),
-            with: ['fullname' => $this->fullname, 'accountnumber' => $this->accountnumber, 'email' => $this->email]
+            with: ['fullname' => $this->bill->fullname]
 
         );
     }
