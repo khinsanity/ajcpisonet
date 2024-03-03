@@ -17,7 +17,7 @@ class MyMailingServices extends Mailable
     /**
      * Create a new message instance.
      */
-    public function __construct(private string $fullname, string $email)
+    public function __construct(private string $fullname, private string $email)
     {
         //
     }
