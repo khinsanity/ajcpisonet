@@ -88,8 +88,10 @@ class ApplicationController extends Controller
             'email' => $email,
             'contact' => $contact
         ]);
-        $newapplicant = Application::findOrFail($id);
-        $newapplicant->delete();
+       //$newapplicant = Application::findOrFail($id); 
+        //$newapplicant->delete(); 
+
+        // add extra
         return redirect('admindashboard');
     }
 

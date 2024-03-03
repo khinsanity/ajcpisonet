@@ -34,6 +34,7 @@
                                             <th>Date Applied</th>
                                             <th>Deny</th>
                                             <th>Approve</th>
+                                            <th>Status</th>
                                         </tr>
                                     </thead>
                                     <tbody>
