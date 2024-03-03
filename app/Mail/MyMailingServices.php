@@ -40,7 +40,7 @@ class MyMailingServices extends Mailable
             view:('mail'),
             with: [
                 'fullname' => $this->fullname,
-                'accountnumber' => $this->accountnumber,
+                'accountnumber' => $this->accountnumber
                 ]
         );
     }
