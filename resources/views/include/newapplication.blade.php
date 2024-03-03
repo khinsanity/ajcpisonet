@@ -41,7 +41,7 @@
                                             <tr class="text-nowrap">
                                                 <td>{{ $applicants->id }}</td>
                                                 <td>{{ $applicants->firstname }} {{ $applicants->lastname }}</td>
-                                                <td>{{ $applicants->email }}</td>
+                                                <td style="text-transform: lowercase">{{ $applicants->email }}</td>
                                                 <td>{{ $applicants->contact }}</td>
                                                 <td>{{ $applicants->birthday }}</td>
                                                 <td>{{ $applicants->gender }}</td>
