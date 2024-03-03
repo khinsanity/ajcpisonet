@@ -31,20 +31,14 @@
                             </a>
                         </h4>
 
-                        <!-- The Modal -->
+                        <!-- The Modal For Email -->
                         <div id="myModal" class="modal">
                             <!-- Modal content -->
                             <div class="modal-content">
-                            <span class="close">&times;</span>
-                            <p>Some text in the Modal..</p>
+                            <span class="close float-end">&times;</span>
+                            {{$billdata->email}}
                             </div>
                         </div>
-
-
-
-
-
-
                         <h6>Account # : {{$billdata->accountnumber}}
                         <span class="float-end mx-2" style="font-size: 12px">Note: Put zero(0) for Paid</span>
                         </h6>
