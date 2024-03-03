@@ -66,7 +66,6 @@ Route::middleware(['auth', 'verified'])->group(function () {
     Route::get('clients/{client_id}/{email}', function(){
         //Send email to anyone
         Mail::to('deepong25@gmail.com')->send (new MyMailingServices('Jupiter'));
-        return redirect('clients/{id}/bill');
     })->name('sendmail');
 });
 
