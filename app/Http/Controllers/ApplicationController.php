@@ -84,7 +84,9 @@ class ApplicationController extends Controller
             'client_id' => $id,
             'fullname' => $firstname .' '. $lastname,
             'plan' => $plan,
-            'accountNumber' => 0
+            'accountNumber' => 0,
+            'email' => $email,
+            'contact' => $contact
         ]);
         $newapplicant = Application::findOrFail($id);
         $newapplicant->delete();

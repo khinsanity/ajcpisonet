@@ -18,6 +18,8 @@ return new class extends Migration
             $table->string('fullname');
             $table->string('accountnumber')->nullable();
             $table->integer('plan');
+            $table->string('email');
+            $table->unsignedBigInteger('contact');
             $table->integer('january')->nullable();
             $table->integer('febuary')->nullable();
             $table->integer('march')->nullable();
