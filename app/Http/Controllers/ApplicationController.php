@@ -78,13 +78,13 @@ class ApplicationController extends Controller
             'fullname' => $firstname .' '. $lastname,
             'address' => $street .' '. $barangay .' '. $town .' '. $province,
             'plan' => $plan,
-            'accountNumber' => 0
+            'accountNumber' => NULL
         ]);
         Bill::create([
             'client_id' => $id,
             'fullname' => $firstname .' '. $lastname,
             'plan' => $plan,
-            'accountNumber' => 0,
+            'accountNumber' => NULL,
             'email' => $email,
             'contact' => $contact
         ]);
