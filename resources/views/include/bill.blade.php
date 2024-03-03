@@ -9,6 +9,9 @@
         <div class="max-w-10xl mx-auto sm:px-4 lg:px-4">
             <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
                 <div class="p-4 text-gray-900">
+                    @if(session('status'))
+                        <div class="alert alert-success">{{session('status')}}</div>
+                    @endif
                    <div class="card">
                     <div class="card-header">
                         <h4 style="text-transform: capitalize">{{$billdata->fullname}}

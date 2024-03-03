@@ -64,8 +64,9 @@ Route::middleware(['auth', 'verified'])->group(function () {
 
     // To be customize
     Route::get('clients/{email}', function($email){
-        //Send email to anyone
+        //Send email to client Bill Reminder
         Mail::to($email)->send (new MyMailingServices('Jupiter'));
+        return redirect()->back()->with('status', 'Bill reminder email sent');
     });
 });
 
