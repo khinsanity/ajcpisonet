@@ -22,7 +22,7 @@
     <div class="container pt-5">
         <div class="row gx-3 justify-content-between overflow-auto scrollbar style-7">
             <div class="promo-card col-sm-6 col-lg-3">
-        <div class="card h-100 pb-5 ">
+        <div class="card h-100 pb-5">
           <div class="multiple-card">
             <h4 class="mb-0" style="font-size:24px;">20Mbps</h4>
             <h4 class="mb-0" style="font-size: 24px;">
@@ -33,7 +33,7 @@
             <p class="fw-light opo">•<small> Dive into all your online passions effortlessly.</small></p>
             <p class="fw-light opo">•<small> Designed for small households to enjoy seamless access to Facebook, YouTube, Instagram, and Netflix.</small></p>
             <div class="sign-up-free text-center border-0 rounded-pill w-auto text-dark">SIGN UP TO GET FREE</div>
-            <div class="two-months-free fs-4 pt-5 fw-bold mt-14">
+            <div class="fs-4 pt-5 fw-bold mt-14">
                 Two Months Free
             </div>
             <hr class="mt-5">
@@ -52,7 +52,7 @@
                     <small class="fw-bold">Effortless Internet Access for Your Daily Needs</small>
                         <p class="fw-light opo">•<small> Seamlessly indulge in all your online activities</small></p>
                         <p class="fw-light opo">•<small> Specially designed for small households, ensuring steady access to various online activities. Enjoy smooth browsing and streaming to fulfill your daily entertainment and productivity needs.</small></p>
-                <div class="sign-up-free text-center border-0 rounded-pill w-auto text-dark">SIGN UP TO GET FREE</div>
+                <div class="sign-up-free text-center border rounded-pill w-auto text-dark">SIGN UP TO GET FREE</div>
                 <div class="fs-4 pt-14 fw-bold">
                 Two Months Free
             </div>
