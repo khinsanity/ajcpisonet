@@ -17,7 +17,7 @@ class MyMailingServices extends Mailable
     /**
      * Create a new message instance.
      */
-    public function __construct(public Bill $bill)
+    public function __construct(protected Bill $bill,)
     {
         //
     }
