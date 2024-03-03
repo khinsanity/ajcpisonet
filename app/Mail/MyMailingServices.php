@@ -38,8 +38,8 @@ class MyMailingServices extends Mailable
     {
         return new Content(
             view:('mail'),
-            with: ['fullname' => $this->fullname],
-            with: ['accountnumber' => $this->accountnumber]
+            with: ['fullname' => $this->fullname, 'accountnumber' => $this->accountnumber]
+
         );
     }
 
