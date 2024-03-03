@@ -34,8 +34,8 @@
                             </div>
                             <div class="mb-3">
                                 <label>Plan</label>
-                                <input type="text" class="form-control" name="plan" value="{{$client->plan}}" style="text-transform: capitalize" />
-                                @error('address') <span class="text-danger">{{$message}}</span>@enderror
+                                <input type="number" class="form-control" name="plan" value="{{$client->plan}}" />
+                                @error('plan') <span class="text-danger">{{$message}}</span>@enderror
                             </div>
                             <div class="mb-3">
                                 <label>Account Number</label>
