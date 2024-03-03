@@ -16,7 +16,7 @@ class MyMailingServices extends Mailable
     /**
      * Create a new message instance.
      */
-    public function __construct(private $fullname, $accountnumber, $email)
+    public function __construct(private string $fullname)
     {
         //
     }
@@ -34,7 +34,7 @@ class MyMailingServices extends Mailable
     /**
      * Get the message content definition.
      */
-    public function content(): Content
+    public function content($accountnumber, $email): Content
     {
         return new Content(
             view:('mail'),
