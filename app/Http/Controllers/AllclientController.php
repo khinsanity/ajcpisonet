@@ -109,8 +109,41 @@ class AllclientController extends Controller
         }
         $users = User::get();
         return view('include.users', compact('users'));
-
     }
+    public function modiuser($id)
+    {
+        if (Auth::check()) {
+            if (Auth::user()->usertype != 'admin') {
+                return redirect(route('dashboard'));
+            }
+        }
+        $usertype = User::findOrFail($id);
+        return view('include.modifyuser', compact('usertype'));
+    }
+
+    public function modiUsers(Request $request, int $id)
+    {
+        if (Auth::check()) {
+            if (Auth::user()->usertype == 'user') {
+                return redirect(route('dashboard'));
+            }
+        }
+        $request->validate([
+            'usertype' => 'required',
+        ]);
+        User::findOrFail($id)->update([
+            'usertype' => $request->usertype,
+        ]);
+        return redirect()->back()->with('status', 'UserType Updated');
+    }
+
+
+
+
+
+
+
+
 
     //Bill page admin side
     public function bill(int $id){
@@ -119,9 +152,9 @@ class AllclientController extends Controller
     }
     //Bill Edit
     public function billedit($client_id){
-        
+
         $BillEdit = Bill::findOrFail($client_id);
-        return view('include.billedit',compact('BillEdit')); 
+        return view('include.billedit',compact('BillEdit'));
     }
 
     //For Bill Update
