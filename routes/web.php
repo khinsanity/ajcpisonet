@@ -65,8 +65,10 @@ Route::middleware(['auth', 'verified'])->group(function () {
     // To be customize
     Route::get('clients/{email}.{fullname}', function($email, $fullname){
         //Send email to client Bill Reminder
-        Mail::to($email)->send (new MyMailingServices($fullname));
-        return redirect()->back()->with('status', 'Bill reminder email sent');
+        // Mail::to($email)->send (new MyMailingServices($fullname));
+        // return redirect()->back()->with('status', 'Bill reminder email sent');
+        echo $email;
+        echo $fullname;
     })->name('sendemail');
 });
 
