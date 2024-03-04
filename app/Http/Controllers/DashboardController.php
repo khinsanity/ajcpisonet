@@ -28,7 +28,7 @@ class DashboardController extends Controller
             $BillAccountNumber = $searchBillAccountNumber->accountnumber;
         }
 
-        echo gettype($currentAccountNumber);
+        echo gettype($BillAccountNumber);
         // if($currentAccountNumber == $labasACC){
         //     // echo $searchBillAccountNumber->contact;
         //      // return view('dashboard', []);
