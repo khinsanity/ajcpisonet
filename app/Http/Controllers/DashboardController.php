@@ -26,14 +26,14 @@ class DashboardController extends Controller
 
         foreach ($searchBillAccountNumber as $searchBillAccountNumber) {
             $BillAccountNumber = $searchBillAccountNumber->accountnumber;
-            if($currentAccountNumber == $BillAccountNumber){
-                // echo $searchBillAccountNumber->contact;
-                 // return view('dashboard', []);
-                 echo "OKAY";
-            }else{
-                echo "not okay";
-            }
-
+        }
+        
+        if($currentAccountNumber == $BillAccountNumber){
+            // echo $searchBillAccountNumber->contact;
+             // return view('dashboard', []);
+             echo "OKAY";
+        }else{
+            echo "not okay";
         }
 
 
