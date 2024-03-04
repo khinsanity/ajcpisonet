@@ -23,14 +23,17 @@ class DashboardController extends Controller
         $currentAccountNumber = Auth::user()->accountnumber;
         $searchBillAccountNumber = Bill::get();
 
-        $stndby;
+        $accountnumber;
+        $fullname;
+
 
         foreach ($searchBillAccountNumber as $searchBillAccountNumber) {
             if($currentAccountNumber == $searchBillAccountNumber->accountnumber){
                 $stndby=$searchBillAccountNumber->accountnumber;
+                $fullname=$searchBillAccountNumber->fullname;
             }
         }
-        echo $stndby;
+        echo $fullname;
         
 
     }
