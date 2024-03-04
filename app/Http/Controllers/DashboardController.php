@@ -32,14 +32,14 @@ class DashboardController extends Controller
 
         foreach ($searchBillAccountNumber as $searchBillAccountNumber) {
             if($currentAccountNumber == $searchBillAccountNumber->accountnumber){
-                $stndby=$searchBillAccountNumber->accountnumber;
+                $accountnumber=$searchBillAccountNumber->accountnumber;
                 $fullname=$searchBillAccountNumber->fullname;
             }
         }
-        $datacurrent = [$accountnumber];
+       
 
        
-        return view('dashboard', $accountnumber);
+        return view('dashboard', [$accountnumber]);
         
         
 
