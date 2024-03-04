@@ -14,39 +14,21 @@ class DashboardController extends Controller
 {
     public function dashboard()
     {
+        // Prevent unauthorize
         if (Auth::user()->usertype != 'user') {
             return redirect(route('admindashboard'));
         }
 
+        // Getting data for user client
         $userAccountNumber = Auth::user()->accountnumber;
-
-
         $searchAccountNumber = Bill::get();
-
-
 
         foreach ($searchAccountNumber as $searchAccountNumber) {
             $AccountNumber = $searchAccountNumber->accountnumber;
-            $Contact = $searchAccountNumber->contact;
-            $January = $searchAccountNumber->january;
-
-
-             // data from allclient table specific accountNumber Column
-             // dd($AccountNumber);
         }
 
 
-
-        if($userAccountNumber === $AccountNumber){
-
-
-
-        }
-        return view('dashboard', [
-            'AccountNumber'=> $AccountNumber,
-            'Contact' => $Contact,
-            'January' => $January,
-        ]);
+        return view('dashboard');
 
     }
 

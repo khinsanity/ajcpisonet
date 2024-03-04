@@ -58,10 +58,7 @@
                         <div class="container">
                             Billing
                         </div>
-                        {{ $AccountNumber}}
-                        {{$Contact}}
-                        {{$January}}
-
+                        
                     </div>
                 </div>
             </div>
