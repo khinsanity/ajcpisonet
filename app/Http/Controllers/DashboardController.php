@@ -21,17 +21,17 @@ class DashboardController extends Controller
 
         // Getting data for user client
         $currentAccountNumber = Auth::user()->accountnumber;
-
         $searchBillAccountNumber = Bill::get();
 
+        $stndby;
+
         foreach ($searchBillAccountNumber as $searchBillAccountNumber) {
-            $BillAccountNumber = $searchBillAccountNumber->accountnumber;
+            if($currentAccountNumber == $searchBillAccountNumber->accountnumber){
+                $stndby=$searchBillAccountNumber->accountnumber;
+            }
         }
-        if($currentAccountNumber == $BillAccountNumber){
-            // echo $searchBillAccountNumber->contact;
-             // return view('dashboard', []);
-            echo gettype($BillAccountNumber);
-        }
+        echo $stndby;
+        
 
     }
 
