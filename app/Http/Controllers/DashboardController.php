@@ -39,7 +39,7 @@ class DashboardController extends Controller
         $datacurrent = [$accountnumber];
 
        
-        return view('dashboard', [ $accountnumber]);
+        return view('dashboard', $accountnumber);
         
         
 
