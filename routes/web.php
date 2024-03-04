@@ -26,7 +26,7 @@ Route::get('/', [AJCController::class, 'homepage']);
 
 Route::middleware(['auth', 'verified'])->group(function () {
 
-    Route::get('/dashboard', [DashboardController::class, 'dashboard'])->name('dashboard');
+    Route::get('/dashboard/', [DashboardController::class, 'dashboard'])->name('dashboard');
     Route::get('/admindashboard', [AllclientController::class, 'admindashboard'])->name('admindashboard');
     Route::get('/bill', [AJCController::class, 'bill'])->name('bill');
 

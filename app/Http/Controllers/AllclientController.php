@@ -173,6 +173,7 @@ class AllclientController extends Controller
             'october' => 'nullable|integer',
             'november' => 'nullable|integer',
             'december' => 'nullable|integer',
+            'total'=> 'integer',
 
 
         ]);
@@ -183,6 +184,7 @@ class AllclientController extends Controller
             'plan' => $plan,
             'january' => $request->january,
             'febuary' => $request->febuary,
+            'march'=> $request->march,
             'april' => $request->april,
             'may' => $request->may,
             'june' => $request->june,
@@ -192,6 +194,7 @@ class AllclientController extends Controller
             'october' => $request->october,
             'november' => $request->november,
             'december' => $request->december,
+
         ]);
         return redirect()->back()->with('status', 'Bill Updated');
     }
