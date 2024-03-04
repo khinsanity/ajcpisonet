@@ -79,9 +79,9 @@
                                                 <td>Bill Date</td>
                                                 <td>{{date('01-'.'M'.'-'.'Y')}}</td>
                                             </tr>
-                                            <tr class="bg-danger text-light">
-                                                <td>Bill Due Date</td>
-                                                <td>{{date('30-'.'M'.'-'.'Y')}}</td>
+                                            <tr>
+                                                <td class="bg-danger text-light">Bill Due Date</td>
+                                                <td class="bg-danger text-light">{{date('30-'.'M'.'-'.'Y')}}</td>
                                             </tr>
                                             <tr>
                                                 <td>Total Amount Due</td>
