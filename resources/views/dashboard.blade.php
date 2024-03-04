@@ -56,8 +56,8 @@
                     <div class="p-6 text-gray-900 align-items-end">
                         <div class="container-fluid">
                             <div class="row">
-                                <div class="col-12 col-md-8">Hello</div>
-                                <div class="col-12 col-md-4">hi</div>
+                                <div class="col-12 col-lg-8 col-md-6">Hello</div>
+                                <div class="col-12 col-lg-4 col-md-6">hi</div>
                             </div>
                         </div>
 
