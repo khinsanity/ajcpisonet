@@ -58,9 +58,14 @@
                             <div class="row">
                                 <div class="col-12 col-lg-8 col-md-6 ">Hello</div>
                                 <div class="col-12 col-lg-4 col-md-6 bg-white overflow-hidden shadow-sm sm:rounded-lg ">
-                                    <h4>
+                                    <div class="logobill">
+                                        <img src="/assets/agclogo.png" alt="BillLogo" width="50px" height="20px" >
+                                    </div>
+                                    <h6 class="text-center">
                                         Statement of account
-                                    </h4>
+                                    </h6>
+
+
                                 </div>
                             </div>
                         </div>
