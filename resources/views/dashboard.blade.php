@@ -56,7 +56,7 @@
                     <div class="p-6 text-gray-900 align-items-end">
                         <div class="container-fluid">
                             <div class="row">
-                                <div class="col-12 col-lg-8 col-md-6">Hello</div>
+                                <div class="col-12 col-lg-8 col-md-6 bg-white overflow-hidden shadow-sm sm:rounded-lg ">Hello</div>
                                 <div class="col-12 col-lg-4 col-md-6">
                                     <h4>
                                         Statement of account
