@@ -27,6 +27,7 @@ class DashboardController extends Controller
         
         $accountnumber;
         $fullname;
+        $january;
 
 
         foreach ($searchBillAccountNumber as $searchBillAccountNumber) {
