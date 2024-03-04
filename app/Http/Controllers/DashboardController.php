@@ -38,7 +38,7 @@ class DashboardController extends Controller
         }
 
        
-        return view('dashboard', [$accountnumber => $accountnumber]);
+        return view('dashboard', ['accountnumber' => $accountnumber]);
         
         
 
