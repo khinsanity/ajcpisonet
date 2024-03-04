@@ -83,6 +83,10 @@
                                                 <td>Bill Due Date</td>
                                                 <td>{{date('30-'.'M'.'-'.'Y')}}</td>
                                             </tr>
+                                            <tr>
+                                                <td>Total Amount Due</td>
+                                                <td>{{$january}}</td>
+                                            </tr>
                                         </table>
                                     </div>
 
