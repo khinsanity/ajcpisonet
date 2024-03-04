@@ -28,18 +28,30 @@ class DashboardController extends Controller
         $accountnumber;
         $fullname;
         $january;
+        $febuary;
+        $march;
 
 
         foreach ($searchBillAccountNumber as $searchBillAccountNumber) {
             if($currentAccountNumber == $searchBillAccountNumber->accountnumber){
                 $accountnumber=$searchBillAccountNumber->accountnumber;
                 $fullname=$searchBillAccountNumber->fullname;
+                $january=$searchBillAccountNumber->january;
+                $febuary=$searchBillAccountNumber->febuary;
+                $march=$searchBillAccountNumber->march;
+
             }
         }
        
 
        
-        return view('dashboard', ['accountnumber' => $accountnumber]);
+        return view('dashboard', [
+            'accountnumber' => $accountnumber,
+            'fullname' => $fullname,
+            'january' => $january,
+            'febuary' => $febuary,
+            'march' => $march
+        ]);
         
         
 
