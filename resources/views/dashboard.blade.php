@@ -50,12 +50,14 @@
     @else
 
 
-        <div class="py-12">
+        <div class="py-10">
             <div class="max-w-9xl mx-auto sm:px-6 lg:px-8">
                 <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
                     <div class="p-6 text-gray-900 align-items-end">
+                        <div class="col-12 col-lg-6">Hello</div>
+                        <div class="col-12 col-lg-6">hi</div>
 
-                        <div >
+                        {{-- <div >
                             Billing
                         </div>
                         <div>{{$accountnumber}}</div>
@@ -63,7 +65,7 @@
                         <div>{{$january}}</div>
                         <div>{{$febuary}}</div>
                         <div>{{$march}}</div>
-                    </div>
+                    </div> --}}
                 </div>
             </div>
         </div>
