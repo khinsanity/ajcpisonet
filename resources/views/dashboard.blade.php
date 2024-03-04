@@ -85,7 +85,7 @@
                                             </tr>
                                             <tr>
                                                 <td>Total Amount Due</td>
-                                                <td>&#8369; {{$january.$febuary}}.00</td>
+                                                <td>&#8369; {{$january+$febuary+$march}}.00</td>
                                             </tr>
                                         </table>
                                     </div>
