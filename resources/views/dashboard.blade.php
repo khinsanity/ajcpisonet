@@ -87,7 +87,7 @@
                                                 <td>Total Amount Due</td>
                                                 <td>&#8369; {{$january+$febuary+$march+$april}}.00</td>
                                             </tr>
-                                            <tr style="border:1px solid white" class="py-2">
+                                            {{-- <tr style="border:1px solid white" class="py-2">
                                                 <td style="border:none">
                                                   
                                                 </td>
@@ -98,7 +98,7 @@
                                                         SUMMARY OF CHARGES AND CREDITS
                                                 </td>
                                                 <td style="border:none"></td>
-                                            </tr>
+                                            </tr> --}}
                                         </table>
                                     </div>
 
