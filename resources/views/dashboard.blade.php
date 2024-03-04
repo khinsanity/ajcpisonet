@@ -69,11 +69,15 @@
                                         <table class="table table-bordered table-sm" style="font-size: 12px">
                                             <tr>
                                                 <td>Name</td>
-                                                <td class="table-striped">{{$fullname}}</td>
+                                                <td>{{$fullname}}</td>
                                             </tr>
                                             <tr>
                                                 <td>Account #</td>
                                                 <td>{{$accountnumber}}</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Bill Date</td>
+                                                <td>{{date('m')}}</td>
                                             </tr>
                                         </table>
                                     </div>
