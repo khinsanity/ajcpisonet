@@ -58,7 +58,8 @@
                         <div class="container">
                             Billing
                         </div>
-                        
+                        <div>{{$accountnumber}}</div>
+                        <div>{{$fullname}}</div>
                     </div>
                 </div>
             </div>

@@ -27,13 +27,17 @@ class DashboardController extends Controller
         
         $accountnumber;
         $fullname;
-        echo $fullname;
+
+
         foreach ($searchBillAccountNumber as $searchBillAccountNumber) {
             if($currentAccountNumber == $searchBillAccountNumber->accountnumber){
                 $stndby=$searchBillAccountNumber->accountnumber;
                 $fullname=$searchBillAccountNumber->fullname;
             }
         }
+
+        // passing data to dashboard view
+        return view('dashboard', [$accountnumber, $fullname]);
         
         
 
