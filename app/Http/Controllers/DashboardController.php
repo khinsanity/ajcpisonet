@@ -20,18 +20,27 @@ class DashboardController extends Controller
         }
 
         // Getting data for user client
-        $userAccountNumber = Auth::user()->accountnumber;
-        $searchAccountNumber = Bill::get();
+        $currentAccountNumber = Auth::user()->accountnumber;
 
-        foreach ($searchAccountNumber as $searchAccountNumber) {
-            $AccountNumber = $searchAccountNumber->accountnumber;
+        $searchBillAccountNumber = Bill::get();
+
+        foreach ($searchBillAccountNumber as $searchBillAccountNumber) {
+            $BillAccountNumber = $searchBillAccountNumber->accountnumber;
+            if($currentAccountNumber == $BillAccountNumber){
+                echo "okay";
+            }else{
+                echo "not okay";
+            }
+
         }
 
 
-        return view('dashboard');
+        // return view('dashboard');
 
     }
 
+
+    // For linking account number
     public function linkaccount(Request $request)
     {
         $request->validate([
