@@ -85,7 +85,7 @@
                                             </tr>
                                             <tr>
                                                 <td>Total Amount Due</td>
-                                                <td>{{$january}}</td>
+                                                <td>&#8369; {{$january}}</td>
                                             </tr>
                                         </table>
                                     </div>
