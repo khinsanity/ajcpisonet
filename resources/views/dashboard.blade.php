@@ -51,16 +51,50 @@
 
 
         <div class="py-12">
-            <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
+            <div class="max-w-9xl mx-auto sm:px-6 lg:px-8">
                 <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
                     <div class="p-6 text-gray-900 align-items-end">
+                        <div class="container-fluid">
+                            <div class="row">
+                                <div class="col-12 col-lg-8 col-md-6 ">Hello</div>
+                                <div class="col-12 col-lg-4 col-md-6 bg-white overflow-hidden shadow-sm sm:rounded-lg ">
+                                    <div class="logobill">
+                                        <img src="/assets/agclogo.png" alt="BillLogo" width="80px" height="40px" >
+                                    </div>
+                                    <h6 class="text-center uppercase p-0 m-0">
+                                        Statement of account
+                                    </h6>
+                                    <p class="p-0 m-0 text-center" style="font-size: 10px; font-style:italic">Zone 7, Punta, Carles, Iloilo 5019 VAT REG TIN:000012120000</p>
+                                    <div class="responsive-table">
+                                        <table class="table table-bordered table-sm" style="font-size: 12px">
+                                            <tr>
+                                                <td>Name</td>
+                                                <td>{{$fullname}}</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Account #</td>
+                                                <td>{{$accountnumber}}</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Bill Date</td>
+                                                <td>{{date('m')}}</td>
+                                            </tr>
+                                        </table>
+                                    </div>
 
-                        <div class="container">
+                                </div>
+                            </div>
+                        </div>
+
+                        {{-- <div >
                             Billing
                         </div>
                         <div>{{$accountnumber}}</div>
                         <div>{{$fullname}}</div>
-                    </div>
+                        <div>{{$january}}</div>
+                        <div>{{$febuary}}</div>
+                        <div>{{$march}}</div>
+                    </div> --}}
                 </div>
             </div>
         </div>
@@ -69,5 +103,5 @@
 
     @endif
 
-    @include('footer')
+    {{-- @include('footer') --}}
 </x-app-layout>

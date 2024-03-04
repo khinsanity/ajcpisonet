@@ -28,9 +28,18 @@ class DashboardController extends Controller
 
 
 
+
+        $accountnumber;
+        $fullname;
+        $january;
+        $febuary;
+        $march;
+
+
+
         foreach ($searchBillAccountNumber as $searchBillAccountNumber) {
             if($currentAccountNumber == $searchBillAccountNumber->accountnumber){
-                $stndby=$searchBillAccountNumber->accountnumber;
+                $accountnumber=$searchBillAccountNumber->accountnumber;
                 $fullname=$searchBillAccountNumber->fullname;
                 $contact=$searchBillAccountNumber->contact;
                 $plan=$searchBillAccountNumber->plan;
@@ -50,9 +59,11 @@ class DashboardController extends Controller
             }
         }
 
+
+
         // passing data to dashboard view
         return view('dashboard', [
-            'accountnumber' => $stndby,
+            'accountnumber' => $accountnumber,
             'fullname' => $fullname,
             'contact' => $contact,
             'plan'=> $plan,
@@ -72,7 +83,6 @@ class DashboardController extends Controller
 
 
         ]);
-
 
 
     }
