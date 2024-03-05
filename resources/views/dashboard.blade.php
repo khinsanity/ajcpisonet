@@ -240,7 +240,7 @@
             var restorepage = document.body.innerHTML;
             var printcontent = document.getElementById(el).innerHTML;
             document.body.innerHTML = printcontent;
-            window.print();
+            print();
             document.body.innerHTML = restorpage;
         }
     </script>
