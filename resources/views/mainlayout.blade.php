@@ -1384,8 +1384,7 @@
         }
 
         .button-apply-now {
-            width: 129px;
-            height: 40px;
+            width: auto;
             position: relative;
             display: inline-block;
             text-align: center;
@@ -1416,7 +1415,6 @@
                 position: sticky;
                 padding: 0 16px;
                 top: 0;
-                width: 18%;
                 font-size: 14px;
                 margin-top: 16px;
                 left: auto;
@@ -1457,7 +1455,7 @@
             }
 
             .button-apply-now {
-                width: 40%;
+                width: auto;
             }
 
             .exclusive-deals {
@@ -1476,7 +1474,7 @@
             }
 
             .button-apply-now {
-                width: 40%;
+                width: auto;
                 font-size: 9px;
             }
 
@@ -1494,7 +1492,7 @@
             }
 
             .button-apply-now {
-                width: 25%;
+                width: auto;
                 font-size: 10px;
             }
 
