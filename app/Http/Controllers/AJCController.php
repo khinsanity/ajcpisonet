@@ -71,11 +71,12 @@ class AJCController extends Controller
             'inquire_client_email' => 'required',
             'inquire_client_message' => 'required'
         ]);
-        $inquire_client_name = $request->inquire_client_name;
-        $inquire_client_email = $request->inquire_client_email;
-        $inquire_client_message = $request->inquire_client_message;
-        Mail::to('ajcpisonet@gmail.com')->send (new InquireMail($inquire_client_name, $inquire_client_email, $inquire_client_message));
-        return redirect()->back()->with('status', 'Thanks for reaching out.');
+        // $inquire_client_name = $request->inquire_client_name;
+        // $inquire_client_email = $request->inquire_client_email;
+        // $inquire_client_message = $request->inquire_client_message;
+        // Mail::to('ajcpisonet@gmail.com')->send (new InquireMail($inquire_client_name, $inquire_client_email, $inquire_client_message));
+        // return redirect()->back()->with('status', 'Thanks for reaching out.');
+        echo $request->nquire_client_name;
     }
 
    
