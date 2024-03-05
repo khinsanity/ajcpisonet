@@ -103,7 +103,10 @@
                                                 <td style="border:1px solid white">Past Due Amount</td>
                                                 <td style="border:none; border-bottom:1px solid black;" class="text-nowrap">&#8369; {{($january+$febuary+$march+$april)-$march}}.00</td>
                                             </tr>
-                                            
+                                            <tr>
+                                                <td style="border:1px solid white">Current Amount</td>
+                                                <td style="border:none; border-bottom:1px solid black;" class="text-nowrap">&#8369; {{($january+$febuary+$march+$april)-$march-$january}}.00</td>
+                                            </tr>
                                             
                                         </table>
                                     </div>
