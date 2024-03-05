@@ -1416,7 +1416,7 @@
                 padding: 16px;
                 top: 0;
                 font-size: 14px;
-                margin-top: 16px;
+                margin-top: 6px;
                 left: auto;
             }
 
@@ -1454,7 +1454,7 @@
 
             .button-apply-now {
                 width: auto;
-                padding: 4px;
+                padding: 6px;
                 font-size: 12px;
             }
 
