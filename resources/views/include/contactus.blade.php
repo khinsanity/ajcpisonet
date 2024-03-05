@@ -50,6 +50,9 @@
     <body>
         <!-- Your layout content here -->
         @yield('content')
+        @if(session('status'))
+            <div class="alert alert-success">{{session('status')}}</div>
+         @endif
         <div class="col d-flex contact">
             <h1 class="contact_text text-center align-content-center text-uppercase">Keep in touch with us</h1>
             <div class="container text-center">
@@ -71,7 +74,7 @@
         <div class="container-fluid px-5 py-5 min-h-100 bg-gray-100">
             <div class="row ">
                 <div class="col-12 col-md-6 w-full sm:max-w-md px-6 bg-white py-4 shadow-md overflow-hidden sm:rounded-lg">
-                    <form action="{{url('$request->inquire_client_name')}}" method="post">
+                    <form action="{{route('sendemailinquire')}}" method="post">
                         @csrf
                         <div class="mb-3">
                             <div class="mb-3">
