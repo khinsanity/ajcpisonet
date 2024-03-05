@@ -71,21 +71,21 @@
         <div class="container-fluid px-5 py-5 min-h-100 bg-gray-100">
             <div class="row ">
                 <div class="col-12 col-md-6 w-full sm:max-w-md px-6 bg-white py-4 shadow-md overflow-hidden sm:rounded-lg">
-                    <form action="" method="post" class>
+                    <form action="{{url('$request->inquire_client_name')}}" method="post">
                         @csrf
                         <div class="mb-3">
                             <div class="mb-3">
-                                <input type="text" class="form-control" name="" id=""
+                                <input type="text" class="form-control" name="inquire_client_name" id=""
                                     aria-describedby="helpId" placeholder="Name" />
                                 <small id="helpId" class="form-text text-muted">Complete Name</small>
                             </div>
 
-                            <input type="email" class="form-control" name="email" id=""
+                            <input type="email" class="form-control" name="inquire_client_email" id=""
                                 aria-describedby="emailHelpId" placeholder="Email" required />
                             <small id="emailHelpId" class="form-text text-muted">Email Required</small>
                         </div>
                         <div class="mb-3">
-                            <textarea class="form-control" name="message" id="" rows="7" placeholder="Message"></textarea>
+                            <textarea class="form-control" name="inquire_client_message" id="" rows="7" placeholder="Message"></textarea>
                         </div>
                         <div>
                             <button class="btn btn-outline-dark " type="submit" value="Send Message">Send message</button>

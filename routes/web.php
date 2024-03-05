@@ -63,7 +63,7 @@ Route::middleware(['auth', 'verified'])->group(function () {
     Route::get('clients/{client_id}/billedit', [AllclientController::class, 'billedit']);
     Route::put('clients/{client_id}/{fullname}/{accountnumber}/{plan}', [AllclientController::class, 'billupdate'])->name('billupdate');
 
-    // To be customize
+    // Mailing
     Route::get('clients/{email}/{fullname}/{accountnumber}', function($email, $fullname, $accountnumber){
         //Send email to client Bill Reminder
         Mail::to($email)->send (new MyMailingServices($fullname, $email, $accountnumber));
@@ -104,6 +104,15 @@ Route::get('/promos', [AJCController::class, 'promos'])->name('promos');
 Route::get('/contactus', [AJCController::class, 'contactus'])->name('contactus');
 Route::get('/applynow', [AJCController::class, 'applynow'])->name('applynow');
 Route::post('/applynow', [ApplicationController::class, 'applynowPOST'])->name('applynowPOST');
+
+
+
+// Mailing
+Route::get('clients/{email}/{fullname}/{accountnumber}', function($email, $fullname, $accountnumber){
+    //Send email to client Bill Reminder
+    Mail::to(''))->send (new MyMailingServices($fullname, $email, $accountnumber));
+    return redirect()->back()->with('status', 'Bill reminder email sent');
+})->name('sendemail')
 
 
 
