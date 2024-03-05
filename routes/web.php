@@ -108,11 +108,11 @@ Route::post('/applynow', [ApplicationController::class, 'applynowPOST'])->name('
 
 
 // Mailing
-Route::get('clients/{email}/{fullname}/{accountnumber}', function($email, $fullname, $accountnumber){
-    //Send email to client Bill Reminder
-    Mail::to(''))->send (new MyMailingServices($fullname, $email, $accountnumber));
-    return redirect()->back()->with('status', 'Bill reminder email sent');
-})->name('sendemail')
+// Route::get('clients/{email}/{fullname}/{accountnumber}', function($email, $fullname, $accountnumber){
+//     //Send email to client Bill Reminder
+//     Mail::to(''))->send (new MyMailingServices($fullname, $email, $accountnumber));
+//     return redirect()->back()->with('status', 'Bill reminder email sent');
+// })->name('sendemail')
 
 
 
