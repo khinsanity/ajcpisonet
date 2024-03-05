@@ -93,7 +93,7 @@
                                                 </td>
                                                 <td style="border:none"></td>
                                             </tr>
-                                            <tr style="border:1px solid white" >
+                                            <tr style="border:transparent" >
                                                 <td style="border:none">
                                                     SUMMARY OF CHARGES AND CREDITS
                                                 </td>
