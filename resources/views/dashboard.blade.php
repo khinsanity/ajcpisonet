@@ -69,7 +69,7 @@
                                         <table class="table table-bordered table-sm " style="font-size: 12px">
                                             <tr>
                                                 <td>Name</td>
-                                                <td>{{$fullname}}</td>
+                                                <td class="text-nowrap">{{$fullname}}</td>
                                             </tr>
                                             <tr>
                                                 <td>Account #</td>
@@ -101,12 +101,7 @@
                                             </tr>
 
                                             
-                                            {{-- <tr>
-                                                <td style="border:none; ont-size: 12px" class="p-0 m-0">
-                                                        SUMMARY OF CHARGES AND CREDITS
-                                                </td>
-                                                <td style="border:none"></td>
-                                            </tr> --}}
+                                            
                                         </table>
                                     </div>
 
