@@ -37,7 +37,8 @@ class AutoReplyInquire extends Mailable
     public function content(): Content
     {
         return new Content(
-            view: 'view.name',
+            view: 'autoreply',
+            with: ['inquire_client_name' => $this->inquire_client_name]
         );
     }
 
