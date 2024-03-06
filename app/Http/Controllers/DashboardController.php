@@ -24,11 +24,11 @@ class DashboardController extends Controller
         //Getting all data from bill table
         $searchBillAccountNumber = Bill::get();
 
-        // $accountnumber;
-        // $fullname;
-        // $january;
-        // $febuary;
-        // $march;
+        $accountnumber;
+        $fullname;
+        $january;
+        $febuary;
+        $march;
 
         foreach ($searchBillAccountNumber as $searchBillAccountNumber) {
             if($currentAccountNumber == $searchBillAccountNumber->accountnumber){
