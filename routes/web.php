@@ -106,22 +106,22 @@ Route::get('/contactus', [AJCController::class, 'contactus'])->name('contactus')
 Route::get('/applynow', [AJCController::class, 'applynow'])->name('applynow');
 Route::post('/applynow', [ApplicationController::class, 'applynowPOST'])->name('applynowPOST');
 
-Route::get('sendinquire', [AJCController::class, 'sendemailinquire'])->name('sendemailinquire');
+// Route::get('sendinquire', [AJCController::class, 'sendemailinquire'])->name('sendemailinquire');
 
 
-// Mail inquirer
-// Route::post('contactus/sendinquire', function(Request $request){
-//     //     $request->validate([
-//     //     'inquire_client_name' => 'required',
-//     //     'inquire_client_email' => 'required',
-//     //     'inquire_client_message' => 'required'
-//     // ]);
-//     $inquire_client_name = $request->inquire_client_name;
-//     $inquire_client_email = $request->inquire_client_email;
-//     $inquire_client_message = $request->inquire_client_message;
-//     Mail::to('ajcpisonet@gmail.com')->send (new InquireMail($inquire_client_name, $inquire_client_email, $inquire_client_message));
-//     return redirect('contactus')->with('status', 'Thanks for reaching out.');
-// })->name('sendemailinquire');
+//Mail inquirer
+Route::post('contactus/sendinquire', function(Request $request){
+        $request->validate([
+        'inquire_client_name' => 'required',
+        'inquire_client_email' => 'required',
+        'inquire_client_message' => 'required'
+    ]);
+    $inquire_client_name = $request->inquire_client_name;
+    $inquire_client_email = $request->inquire_client_email;
+    $inquire_client_message = $request->inquire_client_message;
+    Mail::to('ajcpisonet@gmail.com')->send (new InquireMail($inquire_client_name, $inquire_client_email, $inquire_client_message));
+    return redirect('contactus')->with('status', 'Thanks for reaching out.');
+})->name('sendemailinquire');
 
 
 
