@@ -47,7 +47,7 @@
 
         {{-- User account linked --}}
     @else
-        <div class="pt-12 ">
+        <div class="pt-12 mt-2">
             <div class="max-w-9xl mx-auto sm:px-6 lg:px-8 mb-3">
                 <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
                     <div class="p-6 text-gray-900 align-items-end">
