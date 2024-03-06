@@ -20,15 +20,22 @@ class DashboardController extends Controller
         }
 
         // Getting data current user client
-        $currentAccountNumber = Auth::user()->accountnumber;
-        //Getting all data from bill table
-        $searchBillAccountNumber = Bill::get();
 
-        $accountnumber;
-        $fullname;
-        $january;
-        $febuary;
-        $march;
+
+        
+
+        if(Auth::user()->accountnumber == null){
+            return view('dashboard');
+        }else{
+            $currentAccountNumber = Auth::user()->accountnumber;
+             //Getting all data from bill table
+            $searchBillAccountNumber = Bill::get();
+
+        // $accountnumber;
+        // $fullname;
+        // $january;
+        // $febuary;
+        // $march;
 
         foreach ($searchBillAccountNumber as $searchBillAccountNumber) {
             if($currentAccountNumber == $searchBillAccountNumber->accountnumber){
@@ -77,6 +84,8 @@ class DashboardController extends Controller
 
 
         ]);
+        }
+       
 
 
     }
