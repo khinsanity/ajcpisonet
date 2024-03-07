@@ -5,13 +5,12 @@
     <div class="container-fluid p-0">
         <div class="row d-flex justify-content-center py-3">
             <div class="row p-0 m-md-1">
-                <div class="m-auto col-12 col-md-10 col-lg-6 my-md-2">
+                <div class="row m-auto">
                     @if (session('success'))
                         <div class="alert alert-success">{{ session('success') }}</div>
                     @endif
-                    <div class="col-12 col-md-12 col-lg-6 plan2 my-md-2">
 
-
+                    <div class="col-12 col-md-12 col-lg-6 my-md-2">
                         <form action="{{ route('applynowPOST') }}" method="POST" enctype="multipart/form-data">
                             @csrf
                             <div class="col-10 m-auto p-4 border rounded shadow">
@@ -155,9 +154,9 @@
                     <div class="col-12 col-md-12 col-lg-6 plan2 my-md-2">
                         <div class="row my-lg-5">
                             <div class="col col-md-2"><span></span></div>
-                            <div class="promo-card col-12 col-md-12 col-lg-4 text-center px-md-0 p-lg-2 m-1">
-                                <div class="card card_2 h-100">
-                                    <div class="card-body text-black shadow rounded">
+                            <div class=" col-12 col-md-12 col-lg-4 text-center px-md-0 p-lg-2 m-1">
+                                <div class=" h-100 p-3 shadow rounded">
+                                    <div class="card-body text-black ">
                                         <a href="{{ route('20mbps') }}">
                                             <h5 class="card-title fw-bold">Exclusive Offer!</h5>
                                             <h3 class="card-text fs-1 fw-bolder">20 Mbps</h3>
@@ -167,9 +166,9 @@
                                 </div>
                             </div>
 
-                            <div class="promo-card col-12 col-md-12 col-lg-4 text-center p-lg-2 px-md-0 m-1">
-                                <div class="card card_2 h-100">
-                                    <div class="card-body text-black shadow rounded">
+                            <div class=" col-12 col-md-12 col-lg-4 text-center p-lg-2 px-md-0 m-1">
+                                <div class=" h-100 p-3 shadow rounded">
+                                    <div class="card-body text-black ">
                                         <a href="{{ route('30mbps') }}">
                                             <h5 class="card-title fw-bold">Exclusive Offer!</h5>
                                             <h3 class="card-text fs-1 fw-bolder">30Mbps</h3>
