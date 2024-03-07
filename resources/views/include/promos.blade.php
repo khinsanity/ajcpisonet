@@ -2,6 +2,7 @@
 @section('title', 'AJC-Promos')
 @section('content')
 
+
     <div class="hero-section2">
         <div class="container">
             <h1 class="text-white" id="texts">Get your free install today and enjoy 2 months of internet on the house!
@@ -145,13 +146,8 @@
         </div>
     </div>
 
-<<<<<<< HEAD
     <!-- Accordion Section -->
-    <!--<div class="accordion">
-=======
-    {{-- <!-- Accordion Section -->
-    <div class="accordion">
->>>>>>> 781a2c2b9bf8f96c7afb34db2e3f6d6dfec8898d
+    {{-- <div class="accordion">
         <h1>Frequently Asked Questions</h1>
         <div class="accordion-item">
             <input type="checkbox" id="accordion1">
@@ -195,7 +191,7 @@
                 connections and gaming-friendly services. Many gamers prefer AJC PISONET for their gaming sessions due to
                 its reliable connectivity and affordable rates.</div>
         </div>
-    </div> -->
+    </div>
     <!-- More Accordion Items -->
     <div class="upcontainer">
         <h5 class="snippetTitle">Not what you're looking for?</h5>
