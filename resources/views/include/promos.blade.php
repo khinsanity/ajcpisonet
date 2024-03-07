@@ -154,7 +154,7 @@
     </div>
     </div>
 
-    <!-- Accordion Section -->
+    {{-- <!-- Accordion Section -->
     <div class="accordion">
         <h1>Frequently Asked Questions</h1>
         <div class="accordion-item">
@@ -203,6 +203,6 @@
     <!-- More Accordion Items -->
     <div class="upcontainer">
         <h5 class="snippetTitle">Not what you're looking for?</h5>
-    </div>
+    </div> --}}
 
 @endsection
