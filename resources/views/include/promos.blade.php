@@ -142,7 +142,16 @@
     </div>
 
     <!-- Accordion Section -->
+
+    <!--<div class="accordion">
+
+    {{-- <!-- Accordion Section -->
+    <div class="accordion">
+
+
+
     {{-- <div class="accordion">
+
         <h1>Frequently Asked Questions</h1>
         <div class="accordion-item">
             <input type="checkbox" id="accordion1">
