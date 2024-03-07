@@ -2,7 +2,7 @@
     <footer class="main-footer">
         <div class="footer-left">
 
-        <img src="./assets/agclogo.png" alt="logohere" class="w-25 mr-2 agc-logo">
+        <img src="./assets/agclogo.png" alt="logohere" class="mr-2 agc-logo" style="width: 200px;">
 
             <p class="footer-company-name">Copyright © 2024 <strong>AJC</strong> All rights reserved</p>
         </div>
@@ -31,8 +31,8 @@
             </p>
             <div class="footer-icons">
                 <a href="https://www.facebook.com/profile.php?id=100093338891270"><i class="bi bi-facebook"></i></a>
-                <a href="#"><i class="bi bi-linkedin"></i></a>
-                <a href="#"><i class="bi bi-twitter"></i></a>
+                <a href="https://www.linkedin.com/login"><i class="bi bi-linkedin"></i></a>
+                <a href="https://twitter.com/?lang=en"><i class="bi bi-twitter"></i></a>
             </div>
         </div>
     </footer>
