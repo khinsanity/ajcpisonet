@@ -12,27 +12,6 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('bills', function (Blueprint $table) {
-            $table->id();
-            $table->unsignedBigInteger('client_id');
-            $table->foreign('client_id')->references('id')->on('allclients')->onUpdate('cascade')->onDelete('cascade');
-            $table->string('fullname');
-            $table->string('accountnumber')->nullable();
-            $table->integer('plan');
-            $table->string('email');
-            $table->unsignedBigInteger('contact');
-            $table->integer('january')->nullable();
-            $table->integer('febuary')->nullable();
-            $table->integer('march')->nullable();
-            $table->integer('april')->nullable();
-            $table->integer('may')->nullable();
-            $table->integer('june')->nullable();
-            $table->integer('july')->nullable();
-            $table->integer('august')->nullable();
-            $table->integer('september')->nullable();
-            $table->integer('october')->nullable();
-            $table->integer('november')->nullable();
-            $table->integer('december')->nullable();
-            $table->timestamps();
             $table->dropColumn('contact');
         });
     }
