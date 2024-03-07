@@ -160,7 +160,7 @@ class AllclientController extends Controller
                 $november=$billdata->november;
                 $december=$billdata->december;
                 $total= $january+$febuary+$march+$april+$may+$june+$july+$august+$september+$october+$november+$december;
-        return view ('bill', [
+        return view ('include.bill', [
             'accountnumber' => $accountnumber,
             'fullname' => $fullname,
             'contact' => $contact,
