@@ -1,6 +1,7 @@
 @extends('mainlayout')
 @section('title', 'AJC-Apply')
 @section('content')
+
     <div class="container-fluid p-0">
         <div class="row d-flex justify-content-center py-3">
             <div class="row p-0 m-md-1">
@@ -143,40 +144,52 @@
                             </div>
                         </div>
                     </form>
+
+          </div>
+                <div class="row mt-3">
+                    <div class="col-lg-6 col-md-12 mt-md-1 p-1">
+                        <a href="/" type="button" class="form-control btn btn-danger text-danger">Cancel</a>
+                    </div>
+                    <div class="col-lg-6 col-md-12 mt-md-1 p-1">
+                        <button type="submit" class="form-control btn btn-primary text-dark">Submit</button>
+                    </div>
+                </div>
+            </div>
+        </form>
+        </div>
+
+
+
+        <div class="col-12 col-md-12 col-lg-6 plan2 my-md-2">
+            <div class="row my-lg-5">
+                <div class="col col-md-2"><span></span></div>
+                <div class="promo-card col-12 col-md-12 col-lg-4 text-center px-md-0 p-lg-2 m-1">
+                    <div class="card card_2 h-100">
+                        <div class="card-body text-black shadow rounded">
+                        <a href="{{ route('20mbps') }}">
+                        <h5 class="card-title fw-bold">Exclusive Offer!</h5>
+                        <h3 class="card-text fs-1 fw-bolder">20 Mbps</h3>
+                        <p class="card-text fs-3">Fiber Unli Plan 899</p>
+                        </a>
+                        </div>
+                    </div>
                 </div>
 
-
-
-                <div class="col-12 col-md-12 col-lg-6 plan2 my-md-2">
-                    <div class="row my-lg-5">
-                        <div class="col col-md-2"><span></span></div>
-                        <div class=" col-12 col-md-12 col-lg-4 text-center px-md-0 p-lg-2 m-1">
-                            <div class=" h-100 p-3 shadow rounded ">
-                                <div class=" text-black  rounded py-3">
-                                    <a href="{{ route('20mbps') }}">
-                                        <h5 class="card-title fw-bold">Exclusive Offer!</h5>
-                                        <h3 class="card-text fs-1 fw-bolder">20 Mbps</h3>
-                                        <p class="card-text fs-3">Fiber Unli Plan 899</p>
-                                    </a>
-                                </div>
-                            </div>
+                <div class="promo-card col-12 col-md-12 col-lg-4 text-center p-lg-2 px-md-0 m-1">
+                    <div class="card card_2 h-100">
+                        <div class="card-body text-black shadow rounded">
+                        <a href="{{ route('30mbps') }}">
+                        <h5 class="card-title fw-bold">Exclusive Offer!</h5>
+                        <h3 class="card-text fs-1 fw-bolder">30Mbps</h3>
+                        <p class="card-text fs-3">Fiber Unli Plan 1000</p>
+                        </a>
                         </div>
-
-                        <div class=" col-12 col-md-12 col-lg-4 text-center p-lg-2 px-md-0 m-1">
-                            <div class=" h-100 p-3 shadow rounded">
-                                <div class=" text-black  rounded py-3">
-                                    <a href="{{ route('30mbps') }}">
-                                        <h5 class="card-title fw-bold">Exclusive Offer!</h5>
-                                        <h3 class="card-text fs-1 fw-bolder">30Mbps</h3>
-                                        <p class="card-text fs-3">Fiber Unli Plan 1000</p>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col col-md-2"><span></span></div>
                     </div>
+                </div>
+                <div class="col col-md-2"><span></span></div>
+            </div>
 
-                    {{-- <div class="row my-lg-5">
+                    <div class="row my-lg-5">
                         <div class="col col-md-2"><span></span></div>
                         <div class=" col-12 col-md-12 col-lg-4 text-center p-lg-2 px-md-0 m-1">
                             <div class=" h-100 p-3 shadow rounded">
@@ -202,8 +215,8 @@
                         </div>
                         <div class="col col-md-2"><span></span></div>
                     </div>
-                </div> --}}
+                </div>
 
-            </div>
-        </div>
-    @endsection
+    </div>
+</div>
+@endsection

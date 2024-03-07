@@ -369,7 +369,5 @@
             window.location.reload();
         }
     </script>
-
-</x-app-layout>
     @include('footer')
-
+</x-app-layout>
