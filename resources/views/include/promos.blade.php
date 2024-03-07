@@ -145,13 +145,13 @@
         </div>
     </div>
 
-<<<<<<< HEAD
     <!-- Accordion Section -->
     <!--<div class="accordion">
-=======
+
     {{-- <!-- Accordion Section -->
     <div class="accordion">
->>>>>>> 781a2c2b9bf8f96c7afb34db2e3f6d6dfec8898d
+
+        781a2c2b9bf8f96c7afb34db2e3f6d6dfec8898d
         <h1>Frequently Asked Questions</h1>
         <div class="accordion-item">
             <input type="checkbox" id="accordion1">
