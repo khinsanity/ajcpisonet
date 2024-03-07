@@ -113,13 +113,13 @@
     </section>
 
     <!-- Hero Section 3 -->
-    <div class="hero-section3">
+    <!--<div class="hero-section3">
         <div class="container">
             <div class="row col-sm-5">
                 <img src="./assets/ads2.png" alt="ads2" class="w-100">
             </div>
         </div>
-    </div>
+    </div> -->
 
     <!-- Container Fluid -->
     <div class="container-fluid">
