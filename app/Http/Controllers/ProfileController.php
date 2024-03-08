@@ -37,7 +37,7 @@ class ProfileController extends Controller
 
             $request = $request->name;
             $request = $request->email;
-            $request = $request->profilepictur;
+            $request = $request->profilepicture;
 
         if ($request->user()->isDirty('email')) {
             $request->user()->email_verified_at = null;
