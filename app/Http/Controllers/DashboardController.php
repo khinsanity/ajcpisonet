@@ -112,12 +112,14 @@ class DashboardController extends Controller
             $user['email_verified_at'] = Auth::user()->email_verified_at; // giving default value from user
             $user['accountnumber'] = $recvAccountNumber; // This is from user input to link account
             $ConfirmLink = Auth::user()->update($user);
-            if ($ConfirmLink) {
-                return redirect('dashboard');
-            } else {
-                return redirect()->back()->with('status', 'Invalid account number!');
-            }
-        } else {
+                if ($ConfirmLink) {
+                    return redirect('dashboard');
+                } else {
+                    return redirect()->back()->with('status', 'Invalid account number!');
+                }
+        }else if($recvAccountNumber === null){
+            return redirect()->back()->with('status', 'Invalid account number!');
+        }else {
             return redirect()->back()->with('status', 'Invalid account number!');
         }
 
