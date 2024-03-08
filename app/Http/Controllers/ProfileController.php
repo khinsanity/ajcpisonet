@@ -33,9 +33,9 @@ class ProfileController extends Controller
         }
      
         if($request->user()->has($request->user()->profilepicture)){
-            // $imagePath = $request->profilepicture->file('profilepicture')->store('profile', 'public');
-            // $request->profilepicture = $imagePath;
-            echo "Hello";
+            $imagePath = $request->profilepicture->file('profilepicture')->store('profile', 'public');
+            $request->profilepicture = $imagePath;
+    
         }else{
             echo "negative";
         }
