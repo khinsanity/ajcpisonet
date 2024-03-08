@@ -1,6 +1,6 @@
 <nav x-data="{ open: false }" class="bg-white border border-gray-100">
     <!-- Primary Navigation Menu -->
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-3">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-3 pt-2">
         <div class="flex justify-between h-16">
             <div class="flex">
                 <!-- Logo -->
@@ -50,11 +50,11 @@
             <div class="hidden sm:flex sm:items-center sm:ms-6">
                 <x-dropdown align="right" width="48">
                     <x-slot name="trigger">
-                        <button >
+                        <button class="text-center">
                             @if(Auth::user()->profilepicture == null)
-                            <span class="avatar rounded-5 mt-3 bg-secondary" style="width:50px; height:50px; aspect-ratio:3/2"><i class="fa-solid fa-user"></i></i></span>
+                            <span class="avatar rounded-5 mt-3 shadow p-2" style="width:50px; height:50px"><i class="fa-solid fa-user fs-3"></i></i></span>
                             @else
-                                <img src="{{ asset(Auth::user()->profilepicture)}}" alt="profileimage" class="avatar rounded-5 mt-3" style="width:50px; height:50px; aspect-ratio:3/2"  />
+                                <img src="{{ asset(Auth::user()->profilepicture)}}" alt="profileimage" class="avatar rounded-5 mt-3 mx-auto" style="width:50px; height:50px; aspect-ratio:3/2"  />
                             @endif
                             <div style="text-transform: capitalize">{{ Auth::user()->name }}</div>
                         </button>
