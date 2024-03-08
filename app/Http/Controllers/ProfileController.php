@@ -46,17 +46,6 @@ class ProfileController extends Controller
         //     $profilepicture -> move($path, $profile_Picture);
         // };
 
-        $profilepicture = User::create([
-            'profilepicture' => $path.$profile_Picture
-        ]);
-
-
-
-
-
-
-
-
 
         $request->user()->save();
 
