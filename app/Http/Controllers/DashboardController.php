@@ -24,7 +24,7 @@ class DashboardController extends Controller
 
 
 
-        if(Auth::user()->accountnumber == null || Auth::user()->accountnumber != Bill::all()->accountnumber){
+        if(Auth::user()->accountnumber == null){
             return view('dashboard');
         }else{
             $currentAccountNumber = Auth::user()->accountnumber;
@@ -57,8 +57,8 @@ class DashboardController extends Controller
                 $november=$searchBillAccountNumber->november;
                 $december=$searchBillAccountNumber->december;
                 $total= $january+$febuary+$march+$april+$may+$june+$july+$august+$september+$october+$november+$december;
-
-
+            }else if($currentAccountNumber != $searchBillAccountNumber->accountnumber){
+                echo 'haha';
             }
         }
         // passing data to dashboard view
