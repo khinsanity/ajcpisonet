@@ -59,8 +59,6 @@ class DashboardController extends Controller
                 $december=$searchBillAccountNumber->december;
                 $total= $january+$febuary+$march+$april+$may+$june+$july+$august+$september+$october+$november+$december;
 
-            }else{
-                $accountnumber=null;
             }
         }
         // passing data to dashboard view
