@@ -28,11 +28,12 @@ class ProfileController extends Controller
     {
         
 
-        $request->user()->fill($request->validated([
+        // $request->user()->fill($request->validated());
+     $request->validated([
             'name' => 'required',
             'email' => 'required',
             'profilepicture' => '',
-        ]));
+        ]);
 
             $request = $request->name;
             $request = $request->email;
