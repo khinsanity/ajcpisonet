@@ -38,6 +38,7 @@ class DashboardController extends Controller
         // $march;
 
         foreach ($searchBillAccountNumber as $searchBillAccountNumber) {
+
             if($currentAccountNumber == $searchBillAccountNumber->accountnumber){
                 $accountnumber=$searchBillAccountNumber->accountnumber;
                 $fullname=$searchBillAccountNumber->fullname;
@@ -57,8 +58,9 @@ class DashboardController extends Controller
                 $november=$searchBillAccountNumber->november;
                 $december=$searchBillAccountNumber->december;
                 $total= $january+$febuary+$march+$april+$may+$june+$july+$august+$september+$october+$november+$december;
+
             }else if($currentAccountNumber != $searchBillAccountNumber->accountnumber){
-                echo 'haha';
+                $accountnumber=null;
             }
         }
         // passing data to dashboard view
