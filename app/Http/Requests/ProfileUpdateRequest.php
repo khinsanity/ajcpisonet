@@ -17,18 +17,18 @@ class ProfileUpdateRequest extends FormRequest
     {
 
 
-        // if($request->has(['profilepicture'])){
-        //     $profilePicture = $request->file('profilepicture');
-        //     $extentionupload = $profilePicture->getClientOriginalExtension();
+        if($request->has(['profilepicture'])){
+            $profilePicture = $request->file('profilepicture');
+            $extentionupload = $profilePicture->getClientOriginalExtension();
 
-        //     $profile_Picture = time() . '.' . $extentionupload;
-        //     $path = 'profile/';
-        //     $profilepicture -> move($path, $profile_Picture);
-        // };
+            $profile_Picture = time() . '.' . $extentionupload;
+            $path = 'profile/';
+            $profilepicture -> move($path, $profile_Picture);
+        };
 
-        // $profilepicture = User::create([
-        //     'profilepicture' => $path.$profile_Picture
-        // ]);
+        $profilepicture = User::create([
+            'profilepicture' => $path.$profile_Picture
+        ]);
 
         return [
             'name' => ['required', 'string', 'max:255'],
