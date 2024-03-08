@@ -13,7 +13,7 @@
         </h2>
     </x-slot>
 
-    @if (Auth::user()->accountnumber == null)
+    @if (Auth::user()->accountnumber == null || Auth::user()->accountnumber != $accountnumber)
         <div class="main">
             <div class="container mt-3">
                 <div class="row flex justify-content-center mt-5 ">
