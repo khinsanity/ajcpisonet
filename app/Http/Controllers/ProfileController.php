@@ -29,10 +29,14 @@ class ProfileController extends Controller
         
 
         $request->user()->fill($request->validated([
-            $request = $request->name,
-            $request = $request->email,
-            $request = $request->profilepicture
+            'name' => 'required',
+            'email' => 'required',
+            'profilepicture' => '',
         ]));
+
+            $request = $request->name;
+            $request = $request->email;
+            $request = $request->profilepictur;
 
         if ($request->user()->isDirty('email')) {
             $request->user()->email_verified_at = null;
