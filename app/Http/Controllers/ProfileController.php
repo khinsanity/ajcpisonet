@@ -32,15 +32,15 @@ class ProfileController extends Controller
             $request->user()->email_verified_at = null;
         }
      
-        // if($request->user()->has($request->profilepicture)){
-        //     // $imagePath = $request->profilepicture->file('profilepicture')->store('profile', 'public');
-        //     // $request->profilepicture = $imagePath;
-        //     echo "Hello";
-        // }else{
-        //     echo "negative";
-        // }
+        if($request->user()->has($requestuser()->profilepicture)){
+            // $imagePath = $request->profilepicture->file('profilepicture')->store('profile', 'public');
+            // $request->profilepicture = $imagePath;
+            echo "Hello";
+        }else{
+            echo "negative";
+        }
 
-        echo $request->user()->profilepicture;
+
 
         // if($request->user()->has('profilepicture')){
         //     $profilePicture = $request->user()->file('profilepicture');
