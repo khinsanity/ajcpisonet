@@ -41,18 +41,11 @@ class RegisteredUserController extends Controller
 
         if($request->has(['profilepicture'])){
             $profilepicture = $request->file('profilepicture');
-
-
             $extentionupload = $profilepicture->getClientOriginalExtension();
 
-
-            $profilepicture = time() . '.' . $extentionupload;
-        
-
+            $profilePicture = time() . '.' . $extentionupload;
             $path = 'profile/';
-
-            $profilepicture->move($path, $profilepicture);
-      
+            $profilepicture -> move($path, $profilePicture);
         };
 
         $user = User::create([
