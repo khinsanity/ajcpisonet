@@ -61,7 +61,7 @@ class AllclientController extends Controller
         ]);
         return redirect()->back()->with('status', 'Client Updated');
     }
-
+    // Delete
     public function deleteclient(int $id)
     {
         if (Auth::check()) {
@@ -70,8 +70,13 @@ class AllclientController extends Controller
             }
         }
         $client = Allclient::findOrFail($id);
-        $client->delete();
-        return redirect()->back()->with('status', 'Client Deleted');
+
+        $accountnumber = User::get(Auth::user()->accountnumber);
+        
+        echo $accountnumber;
+
+        // $client->delete();
+        // return redirect()->back()->with('status', 'Client Deleted');
     }
 
     // New Application Routes
