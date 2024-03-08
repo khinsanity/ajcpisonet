@@ -32,29 +32,29 @@ class ProfileController extends Controller
             $request->user()->email_verified_at = null;
         }
      
-        if($request->user()->has($request->user()->profilepicture)){
-            $imagePath = $request->profilepicture->file('profilepicture')->store('profile', 'public');
-            $request->profilepicture = $imagePath;
+        // if($request->user()->has($request->user()->profilepicture)){
+        //     $imagePath = $request->profilepicture->file('profilepicture')->store('profile', 'public');
+        //     $request->profilepicture = $imagePath;
     
-        }else{
-            echo "negative";
-        }
+        // }else{
+        //     echo "negative";
+        // }
 
 
 
-        // if($request->user()->has('profilepicture')){
-        //     $profilePicture = $request->user()->file('profilepicture');
-        //     $extentionupload = $profilePicture->getClientOriginalExtension();
+        if($request->user()->has($request->user()->profilepicture)){
+            $profilePicture = $request->user()->profilepicture->file('profilepicture');
+            $extentionupload = $profilePicture->getClientOriginalExtension();
 
-        //     $profile_Picture = time() . '.' . $extentionupload;
-        //     $path = 'profile/';
-        //     $profilepicture -> move($path, $profile_Picture);
-        // };
+            $profile_Picture = time() . '.' . $extentionupload;
+            $path = 'profile/';
+            $profilepicture -> move($path, $profile_Picture);
+        };
 
 
         // $request->user()->save();
 
-        // return Redirect::route('profile.edit')->with('status', 'profile-updated');
+        return Redirect::route('profile.edit')->with('status', 'profile-updated');
     }
 
     /**
