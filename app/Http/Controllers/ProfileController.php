@@ -35,14 +35,14 @@ class ProfileController extends Controller
             'profilepicture' =>['required']
         ]);
         if($request->has(['profilepicture'])){
-                    $profilePictures = $request->file('profilepicture');
-                    $extentionupload = $profilePictures->getClientOriginalExtension();
+                    $profilePicture = $request->file('profilepicture');
+                    $extentionupload = $profilePicture->getClientOriginalExtension();
 
                     $profile_Picture = time() . '.' . $extentionupload;
 
                     $path = 'profile/';
 
-                    $profilePictures->move($path, $profile_Picture);
+                    $profilePicture->move($path, $profile_Picture);
                 };
 
         User::create([
