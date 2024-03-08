@@ -24,7 +24,7 @@ class DashboardController extends Controller
 
 
 
-        if(Auth::user()->accountnumber == null){
+        if(Auth::user()->accountnumber == null || Auth::user()->accountnumber != Bill::all()->accountnumber){
             return view('dashboard');
         }else{
             $currentAccountNumber = Auth::user()->accountnumber;
