@@ -32,7 +32,7 @@ class ProfileController extends Controller
             $request->user()->email_verified_at = null;
         }
      
-        if($request->user()->has($requestuser()->profilepicture)){
+        if($request->user()->has($request->user()->profilepicture)){
             // $imagePath = $request->profilepicture->file('profilepicture')->store('profile', 'public');
             // $request->profilepicture = $imagePath;
             echo "Hello";
