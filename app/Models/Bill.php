@@ -18,7 +18,6 @@ class Bill extends Model
         'accountnumber',
         'plan',
         'email',
-        'contact',
         'january',
         'febuary',
         'march',
