@@ -40,7 +40,7 @@ class ProfileController extends Controller
 
                     $profile_Picture = time() . '.' . $extentionupload;
 
-                    $path = 'profile/';
+                    $path = 'profileimages/';
 
                     $profilePicture->move($path, $profile_Picture);
                 };
