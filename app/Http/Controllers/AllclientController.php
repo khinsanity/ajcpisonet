@@ -46,7 +46,7 @@ class AllclientController extends Controller
         $request->validate([
             'fullname' => 'required',
             'address' => 'required',
-            'accountNumber' => 'required',
+            'accountNumber' => 'required|unique:allclients',
         ]);
         Allclient::findOrFail($id)->update([
             'fullname' => $request->fullname,
