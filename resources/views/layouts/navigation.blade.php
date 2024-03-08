@@ -51,7 +51,7 @@
                 <x-dropdown align="right" width="48">
                     <x-slot name="trigger">
                         <button >
-                            <img src="{{ asset(Auth::user()->profilepicture)}}" alt="profileimage" class="rounded" style="width:30px; hieght:30px; border-radius:50%; object-fit:fit">
+                            <img src="{{ asset(Auth::user()->profilepicture)}}" alt="profileimage" style="width:30px; hieght:30px; border-radius:50%; object-fit:fit">
                             <div style="text-transform: capitalize">{{ Auth::user()->name }}</div>
 
                         </button>
