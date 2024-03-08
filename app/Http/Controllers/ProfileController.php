@@ -27,13 +27,13 @@ class ProfileController extends Controller
      */
     public function update(Request $request): RedirectResponse
     {
-        // $request->user()->fill($request->validated());
+        $request->user()->fill($request->validated());
 
-        $request->validateWithBag('userUpdate', [
-            'name' => ['nullable'],
-            'email' => ['nullable'],
-            'profilepicture' =>['required']
-        ]);
+        // $request->validateWithBag('userUpdate', [
+        //     'name' => ['nullable'],
+        //     'email' => ['nullable'],
+        //     'profilepicture' =>['required']
+        // ]);
         if($request->has(['profilepicture'])){
                     $profilePicture = $request->file('profilepicture');
                     $extentionupload = $profilePicture->getClientOriginalExtension();
@@ -45,9 +45,9 @@ class ProfileController extends Controller
                     $profilePicture->move($path, $profile_Picture);
                 };
 
-        User::create([
-            'profilepicture'=> $path.$profile_Picture
-        ]);
+        // User::create([
+        //     'profilepicture'=> $path.$profile_Picture
+        // ]);
 
         if ($request->user()->isDirty('email')) {
             $request->user()->email_verified_at = null;
