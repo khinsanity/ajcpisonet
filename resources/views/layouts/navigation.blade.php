@@ -51,9 +51,12 @@
                 <x-dropdown align="right" width="48">
                     <x-slot name="trigger">
                         <button >
-                            <img src="{{ asset(Auth::user()->profilepicture)}}" alt="profileimage" class="avatar rounded-5 mt-3" style="width:50px; height:50px; aspect-ratio:3/2"  />
+                            @if(Auth::user()->profilepicture == null)
+                                <span class="avatar rounded-5 text-bg-secondary">MUI</span>
+                            @else
+                                <img src="{{ asset(Auth::user()->profilepicture)}}" alt="profileimage" class="avatar rounded-5 mt-3" style="width:50px; height:50px; aspect-ratio:3/2"  />
+                            @endif
                             <div style="text-transform: capitalize">{{ Auth::user()->name }}</div>
-
                         </button>
                     </x-slot>
 
