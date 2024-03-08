@@ -31,6 +31,11 @@ class ProfileController extends Controller
         if ($request->user()->isDirty('email')) {
             $request->user()->email_verified_at = null;
         }
+        dd($validate);
+        if($request->has('profilepicture')){
+            $imagePath = $request->profilepicture->file('profilepicture')->store('profile', 'public');
+            $request->profilepicture = $imagePath;
+        }
 
         $request->user()->save();
 
