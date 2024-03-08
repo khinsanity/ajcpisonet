@@ -31,11 +31,32 @@ class ProfileController extends Controller
         if ($request->user()->isDirty('email')) {
             $request->user()->email_verified_at = null;
         }
-        dd($request->validate());
-        if($request->has('profilepicture')){
-            $imagePath = $request->profilepicture->file('profilepicture')->store('profile', 'public');
-            $request->profilepicture = $imagePath;
-        }
+     
+        // if($request->user()->has('profilepicture')){
+        //     $imagePath = $request->profilepicture->file('profilepicture')->store('profile', 'public');
+        //     $request->profilepicture = $imagePath;
+        // }
+
+        if($request->user()->has(['profilepicture'])){
+            $profilePicture = $request->file('profilepicture');
+            $extentionupload = $profilePicture->getClientOriginalExtension();
+
+            $profile_Picture = time() . '.' . $extentionupload;
+            $path = 'profile/';
+            $profilepicture -> move($path, $profile_Picture);
+        };
+
+        $profilepicture = User::create([
+            'profilepicture' => $path.$profile_Picture
+        ]);
+
+
+
+
+
+
+
+
 
         $request->user()->save();
 
