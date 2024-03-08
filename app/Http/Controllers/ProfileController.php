@@ -33,8 +33,11 @@ class ProfileController extends Controller
         }
      
         if($request->user()->has($request->profilepicture)){
-            $imagePath = $request->profilepicture->file('profilepicture')->store('profile', 'public');
-            $request->profilepicture = $imagePath;
+            // $imagePath = $request->profilepicture->file('profilepicture')->store('profile', 'public');
+            // $request->profilepicture = $imagePath;
+            echo "Hello";
+        }else{
+            echo "negative";
         }
 
         // if($request->user()->has('profilepicture')){
@@ -47,9 +50,9 @@ class ProfileController extends Controller
         // };
 
 
-        $request->user()->save();
+        // $request->user()->save();
 
-        return Redirect::route('profile.edit')->with('status', 'profile-updated');
+        // return Redirect::route('profile.edit')->with('status', 'profile-updated');
     }
 
     /**
