@@ -30,9 +30,9 @@ class ProfileController extends Controller
 
         // $request->user()->fill($request->validated());
      $request->validated([
-            'name' => 'required',
-            'email' => 'required',
-            'profilepicture' => '',
+        'name' => ['required', 'string', 'max:255'],
+        'email' => ['required', 'string', 'lowercase', 'email', 'max:255', Rule::unique(User::class)->ignore($this->user()->id)],
+        'profilepicture' => ['nullable']
         ]);
 
             $request = $request->name;
