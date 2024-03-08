@@ -17,16 +17,6 @@ class ProfileUpdateRequest extends FormRequest
     {
 
 
-
-        return [
-            'name' => ['required', 'string', 'max:255'],
-            'email' => ['required', 'string', 'lowercase', 'email', 'max:255', Rule::unique(User::class)->ignore($this->user()->id)],
-            'profilepicture' => ['required']
-
-            
-            
-        ];
-
         // if($request->has(['profilepicture'])){
         //     $profilePicture = $request->file('profilepicture');
         //     $extentionupload = $profilePicture->getClientOriginalExtension();
@@ -39,6 +29,19 @@ class ProfileUpdateRequest extends FormRequest
         // $profilepicture = User::create([
         //     'profilepicture' => $path.$profile_Picture
         // ]);
+
+        // return [
+        //     'name' => ['required', 'string', 'max:255'],
+        //     'email' => ['required', 'string', 'lowercase', 'email', 'max:255', Rule::unique(User::class)->ignore($this->user()->id)],
+        //     'profilepicture' => ['required']
+
+            
+            
+        // ];
+
+        echo $request;
+
+        
 
 
     }
