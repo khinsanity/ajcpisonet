@@ -39,21 +39,21 @@ class RegisteredUserController extends Controller
 
         ]);
 
-        if($request->has(['profilepicture'])){
-            $profilepicture = $request->file('profilepicture');
-            $extentionupload = $profilepicture->getClientOriginalExtension();
+        // if($request->has(['profilepicture'])){
+        //     $profilepicture = $request->file('profilepicture');
+        //     $extentionupload = $profilepicture->getClientOriginalExtension();
 
-            $profilePicture = time() . '.' . $extentionupload;
-            $path = 'profile/';
-            $profilepicture -> move($path, $profilePicture);
-        };
+        //     $profilePicture = time() . '.' . $extentionupload;
+        //     $path = 'profile/';
+        //     $profilepicture -> move($path, $profilePicture);
+        // };
 
         $user = User::create([
             'name' => $request->name,
             'email' => $request->email,
             'password' => Hash::make($request->password),
             'accountnumber' => $request->accountnumber,
-            'profilepicture' => $path.$profilepicture
+            // 'profilepicture' => $path.$profilepicture,
 
        ]);
 
