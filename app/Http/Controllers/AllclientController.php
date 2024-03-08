@@ -71,12 +71,12 @@ class AllclientController extends Controller
         }
         $client = Allclient::findOrFail($id);
 
-        $accountnumber = User::get(Auth::user()->accountnumber);
-        
-        echo $accountnumber;
 
-        // $client->delete();
-        // return redirect()->back()->with('status', 'Client Deleted');
+        
+
+
+        $client->delete();
+        return redirect()->back()->with('status', 'Client Deleted');
     }
 
     // New Application Routes
